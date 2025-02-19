@@ -5,6 +5,11 @@ import Clients from "@/components/Clients";
 import Testimonials from "@/components/Testimonials";
 import Services from "@/components/Services";
 import CaseStudies from "@/components/CaseStudies";
+import TeamSection from "@/components/Team-Section";
+import DevelopmentApproach from "@/components/Devapproach";
+import Footer from "@/components/Footer";
+import Hire from "@/components/Hire";
+import FeaturedResources from "@/components/Resources";
 
 
 export default function Home() {
@@ -15,7 +20,13 @@ export default function Home() {
       <Services />
       <Clients />
       <Testimonials />
-      <CaseStudies/>
+      <CaseStudies />
+      <TeamSection />
+      <DevelopmentApproach />
+      <FeaturedResources />
+      <Hire />
+      <Footer />
+
     </div>
   );
 }
