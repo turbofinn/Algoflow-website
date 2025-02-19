@@ -52,7 +52,7 @@ export default function FeaturedResources() {
                     {resources.map((resource) => (
                         <div
                             key={resource.id}
-                            className=" w-[245px] md:h-[315px] h-[345px] flex-shrink-0 snap-center bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
+                            className=" w-[245px] md:w-[300px] md:h-[315px] h-[345px] flex-shrink-0 snap-center bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
                         >
                             <div className="overflow-hidden rounded-t-lg">
                                 <div className="relative aspect-[4/3] w-full h-[175px] rounded-[20px]">

@@ -44,7 +44,7 @@ export default function Clients() {
                     <h2 className="text-2xl md:text-4xl font-normal">Meet the People</h2>
                     <h3 className="text-2xl md:text-4xl font-bold mt-2">We are Working With</h3>
                 </div>
-                <img src="/Frame 22.png" alt="" className='absolute top-[1308px] right-2 md:block hidden' />
+                {/* <img src="/Frame 22.png" alt="" className='absolute top-[1308px] right-2 md:block hidden' /> */}
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center justify-center h-[202.34px] w-full bg-[#F7F7FA] border-[1px] border-[#E7DAED]">
                     {logos.map((logo) => (
                         <div key={logo.id} className="w-full h-24 bg-transprent rounded-lg flex items-center justify-center">
