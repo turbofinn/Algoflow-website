@@ -1,10 +1,14 @@
+"use client"
 import React from 'react';
 import { Inter } from 'next/font/google';
+import { useState } from 'react';
+import ContactPopup from './ContactPopup';
 
 const Hero = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
     return (
         <div className="h-screen bg-bg1 relative overflow-hidden font-Inter">
-            <div className=' relative 2xl:h-[546px] 2xl:w-[1145px] h-full w-full 2xl:top-[148px] 2xl:left-[104px]  flex flex-col 2xl:flex-row items-center justify-center p-6 2xl:p-0'>
+            <div className='  h-full w-full  flex flex-col 2xl:flex-row items-center justify-center p-6 2xl:p-0'>
                 <div className=' 2xl:h-[355px] 2xl:w-[531px] h-full w-full  flex flex-col 2xl:justify-between justify-center gap-8'>
                     <div className=' 2xl:w-[531px] 2xl:h-[228px] w-full h-2/3 flex flex-col justify-center items-center 2xl:gap-[28px] gap-[2px]'>
                         <div className=' 2xl:w-[520px] 2xl:h-[142px] w-full h-fit'>
@@ -18,12 +22,18 @@ const Hero = () => {
                             We help build and manage a team of world-class developers to bring your vision to life
                         </p>
                     </div>
-                    <button className="bg-[#3D63EA] flex justify-center items-center  text-sm text-white w-[175px] h-[52px] px-[30px] py-[19px]  rounded transition-colors">Let's get Started!</button>
+                    <button
+                        className="bg-[#3D63EA] text-sm text-white w-[175px] h-[52px] px-[30px] py-[19px] rounded"
+                        onClick={() => setIsModalOpen(true)}
+                    >
+                        Let's get Started!
+                    </button>
                 </div>
                 <div className=' 2xl:h-[546px] 2xl:w-[614px] h-auto w-full '>
                     <img src="/Hero-Wrapper__image.png" alt="" />
                 </div>
             </div>
+            {isModalOpen && <ContactPopup onClose={() => setIsModalOpen(false)} />}
         </div>
     );
 }
