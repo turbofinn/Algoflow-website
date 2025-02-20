@@ -41,7 +41,7 @@ export default function TeamSection() {
                             <div className="flex items-center gap-3 mt-4">
                                 <div className="w-12 h-12 rounded-full overflow-hidden">
                                     <img
-                                        src="/ceo1.png"
+                                        src="/icons/ceo1.png"
                                         alt="CEO avatar"
                                         className="w-full h-full object-cover"
                                     />
@@ -64,7 +64,7 @@ export default function TeamSection() {
 
                         <div className="rounded-lg overflow-hidden">
                             <img
-                                src="/Rectangle 17.png"
+                                src="/images/Rectangle 17.png"
                                 alt="Team collaboration"
                                 className="w-full h-auto md:w-[557px] md:h-[473px]"
                             />
@@ -85,7 +85,7 @@ export default function TeamSection() {
 
                             <div className="rounded-lg overflow-hidden  md:w-[557px] md:h-[473px]">
                                 <img
-                                    src="/Rectangle 18.png"
+                                    src="/images/Rectangle 18.png"
                                     alt="Developers working"
                                     className="w-full h-auto"
                                 />
@@ -116,7 +116,7 @@ export default function TeamSection() {
                                 <div className="flex items-center gap-3 mt-4">
                                     <div className="w-12 h-12 rounded-full overflow-hidden">
                                         <img
-                                            src="/ceo2.png"
+                                            src="/icons/ceo2.png"
                                             alt="CEO avatar"
                                             className="w-full h-full object-cover"
                                         />
@@ -159,7 +159,7 @@ export default function TeamSection() {
                             <div className="flex items-center gap-3 mt-4">
                                 <div className="w-12 h-12 rounded-full overflow-hidden">
                                     <img
-                                        src="/ceo3.png"
+                                        src="/icons/ceo3.png"
                                         alt="CEO avatar"
                                         className="w-full h-full object-cover"
                                     />
@@ -182,7 +182,7 @@ export default function TeamSection() {
 
                         <div className="rounded-lg overflow-hidden">
                             <img
-                                src="/Rectangle 19.png"
+                                src="/images/Rectangle 19.png"
                                 alt="Team collaboration"
                                 className="w-full h-auto md:w-[557px] md:h-[473px]"
                             />

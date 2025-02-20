@@ -29,7 +29,7 @@ export default function Development() {
     
         <div className="hidden lg:flex absolute -right-4 top-1/2 -translate-y-1/2 z-10">
           <div className="w-10 h-10 bg-white flex items-center justify-center">
-            <img src="/Trophy.png" alt="Trophy" className="w-10 h-10 object-contain" />
+            <img src="/icons/Trophy.png" alt="Trophy" className="w-10 h-10 object-contain" />
           </div>
         </div>
 

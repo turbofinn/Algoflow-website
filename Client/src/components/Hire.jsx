@@ -16,7 +16,7 @@ const Hire = () => {
                         Hire Top Developers
                     </button>
 
-                    <img src="/Group 40.png" alt="" className=' relative -top-10' />
+                    <img src="/icons/Group 40.png" alt="" className=' relative -top-10' />
                 </div>
             </div>
         </section>

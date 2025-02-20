@@ -9,7 +9,7 @@ const caseStudies = [
     title: "Website Design for SCFC Canada",
     description:
       "Born out of a vision, a single-minded objective that puts service before anything else, Swift Clearance and Forwarding Corp. surging forth to deliver the best services in the shipping and logistics scenario. Its meteoric rise stems out of a solid foundation. The management boasts of over 20 years of rich and varied experience in the shipping and freight forwarding industry.",
-    image: "/caseStudy1.jpeg",
+    image: "/images/caseStudy1.jpeg",
     backgroundColor: "bg-blue-50",
   },
   {
@@ -17,7 +17,7 @@ const caseStudies = [
     title: "Website Design for SCFC Canada",
     description:
       "Born out of a vision, a single-minded objective that puts service before anything else, Swift Clearance and Forwarding Corp. surging forth to deliver the best services in the shipping and logistics scenario. Its meteoric rise stems out of a solid foundation. The management boasts of over 20 years of rich and varied experience in the shipping and freight forwarding industry.",
-    image: "/caseStudy2.jpeg",
+    image: "/images/caseStudy2.jpeg",
     backgroundColor: "bg-emerald-50",
   },
   {
@@ -25,7 +25,7 @@ const caseStudies = [
     title: "Website Design for SCFC Canada",
     description:
       "Born out of a vision, a single-minded objective that puts service before anything else, Swift Clearance and Forwarding Corp. surging forth to deliver the best services in the shipping and logistics scenario. Its meteoric rise stems out of a solid foundation. The management boasts of over 20 years of rich and varied experience in the shipping and freight forwarding industry.",
-    image: "/caseStudy3.jpeg",
+    image: "/images/caseStudy3.jpeg",
     backgroundColor: "bg-pink-50",
   },
 ]

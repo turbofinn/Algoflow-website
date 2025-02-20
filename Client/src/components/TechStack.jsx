@@ -12,15 +12,15 @@ const categories = [
 ];
 
 const technologies = [
-  { name: 'Node.js', image: '/node.svg', category: 'backend' },
+  { name: 'Node.js', image: '/icons/node.svg', category: 'backend' },
   { name: 'PHP', image: 'https://www.php.net/images/logos/new-php-logo.svg', category: 'backend' },
   { name: 'MySQL', image: 'https://www.mysql.com/common/logos/logo-mysql-170x115.png', category: 'backend' },
-  { name: 'Java', image: '/java.svg', category: 'backend' },
-  { name: '.NET', image: '/dotnet.svg', category: 'backend' },
+  { name: 'Java', image: '/icons/java.svg', category: 'backend' },
+  { name: '.NET', image: '/icons/dotnet.svg', category: 'backend' },
   { name: 'Python', image: 'https://www.python.org/static/community_logos/python-logo.png', category: 'backend' },
-  { name: 'Ruby on Rails', image: '/rails.svg', category: 'backend' },
-  { name: 'Go', image: '/golang.svg', category: 'backend' },
-  { name: 'MongoDB', image: '/mongo.svg', category: 'backend' },
+  { name: 'Ruby on Rails', image: '/icons/rails.svg', category: 'backend' },
+  { name: 'Go', image: '/icons/golang.svg', category: 'backend' },
+  { name: 'MongoDB', image: '/icons/mongo.svg', category: 'backend' },
 ];
 
 export default function TechStack() {

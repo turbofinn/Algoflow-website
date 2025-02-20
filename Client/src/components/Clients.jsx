@@ -2,12 +2,12 @@ import Image from 'next/image';
 import { IconArrowRight } from '@tabler/icons-react';
 
 const logos = [
-    { id: 1, src: '/logo1.png', alt: 'Logo 1' },
-    { id: 2, src: '/logo2.png', alt: 'Logo 2' },
-    { id: 3, src: '/logo5.png', alt: 'Logo 3' },
-    { id: 4, src: '/logo5.png', alt: 'Logo 4' },
-    { id: 5, src: '/logo9.png', alt: 'Logo 5' },
-    { id: 6, src: '/logo5.png', alt: 'Logo 6' },
+    { id: 1, src: '/icons/logo1.png', alt: 'Logo 1' },
+    { id: 2, src: '/icons/logo2.png', alt: 'Logo 2' },
+    { id: 3, src: '/icons/logo5.png', alt: 'Logo 3' },
+    { id: 4, src: '/icons/logo5.png', alt: 'Logo 4' },
+    { id: 5, src: '/icons/logo9.png', alt: 'Logo 5' },
+    { id: 6, src: '/icons/logo5.png', alt: 'Logo 6' },
 ];
 
 export default function Clients() {
@@ -31,7 +31,7 @@ export default function Clients() {
                 </div>
                 <div className="md:w-1/2 flex justify-center relative ">
                     <div className="md:w-[601px] md:h-[460px] flex items-center justify-center ">
-                        <img src="/Abou-us-Video.png" alt="About Us Video" />
+                        <img src="/images/Abou-us-Video.png" alt="About Us Video" />
                     </div>
                 </div>
             </section>

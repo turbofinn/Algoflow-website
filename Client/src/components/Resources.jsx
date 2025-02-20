@@ -6,31 +6,31 @@ export default function FeaturedResources() {
         {
             id: 1,
             title: "How to Build a Scalable Application up to 1 Million Users on AWS",
-            image: "/resources1.png"
+            image: "/images/resources1.png"
             ,
         },
         {
             id: 2,
             title: "How to Build a Scalable Application up to 1 Million Users on AWS",
-            image: "/resources2.png"
+            image: "/images/resources2.png"
 
         },
         {
             id: 3,
             title: "How to Build a Scalable Application up to 1 Million Users on AWS",
-            image: "/resources3.png"
+            image: "/images/resources3.png"
 
         },
         {
             id: 4,
             title: "How to Build a Scalable Application up to 1 Million Users on AWS",
-            image: "/resources4.png"
+            image: "/images/resources4.png"
 
         },
         {
             id: 5,
             title: "How to Build a Scalable Application up to 1 Million Users on AWS",
-            image: "/resources5.png"
+            image: "/images/resources5.png"
 
         },
     ]

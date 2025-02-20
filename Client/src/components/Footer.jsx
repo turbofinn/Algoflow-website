@@ -18,7 +18,7 @@ export default function Footer() {
             <p className="text-gray-600 w-72">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 
             <img
-              src="/google-page-speed 1.png"
+              src="/icons/google-page-speed 1.png"
               alt="Google"
               className=" w-[199px] h-[53px]"
             />

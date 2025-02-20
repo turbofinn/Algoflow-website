@@ -27,7 +27,7 @@ const Hero = () => {
                     </button>
                 </div>
                 <div className='flex justify-center w-full lg:w-1/2 px-4 md:px-8'>
-                    <img src="/Hero-Wrapper__image.png" alt="" className='w-full h-auto max-w-[614px]' />
+                    <img src="/images/Hero-Wrapper__image.png" alt="" className='w-full h-auto max-w-[614px]' />
                 </div>
             </div>
             {isModalOpen && <ContactPopup onClose={() => setIsModalOpen(false)} />}
