@@ -90,14 +90,14 @@ export default function CaseStudies() {
                         <div className="text-right pt-14">
                             <Link
                                 href="#"
-                                className="inline-flex items-center text-primary hover:underline"
+                                className="inline-flex items-center text-primary hover:underline" 
                                 style={{
                                     fontFamily: "Inter",
                                     fontWeight: 600,
                                     fontSize: "14px",
                                     lineHeight: "14px",
                                     letterSpacing: "0%",
-                                    color: 'purple',
+                                    color: 'green',
                                     }}
                             >
                                 Read more
@@ -120,7 +120,7 @@ export default function CaseStudies() {
                     fontSize: "20px",
                     lineHeight: "27.3px",
                     letterSpacing: "0%",
-                    color: 'purple'
+                    color: 'green'
                     }}
                 >
                     Read more case studies

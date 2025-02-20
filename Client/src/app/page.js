@@ -10,6 +10,8 @@ import DevelopmentApproach from "@/components/Devapproach";
 import Footer from "@/components/Footer";
 import Hire from "@/components/Hire";
 import FeaturedResources from "@/components/Resources";
+import TechStack from "@/components/TechStack";
+import Development from "@/components/Development";
 
 
 export default function Home() {
@@ -26,7 +28,9 @@ export default function Home() {
       <FeaturedResources />
       <Hire />
       <Footer />
-
+      <CaseStudies />
+      <TechStack />
+      <Development />
     </div>
   );
 }
