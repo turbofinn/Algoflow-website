@@ -18,19 +18,40 @@ export default function Home() {
   return (
     <div className="bg-white min-h-screen overflow-x-hidden custom-scrollbar">
       <Navbar />
-      <Hero />
-      <Services />
-      <Clients />
-      <Testimonials />
-      <CaseStudies />
-      <TeamSection />
-      <DevelopmentApproach />
-      <FeaturedResources />
-      <Hire />
+      <section id="hero">
+        <Hero />
+      </section>
+      <section id="services">
+        <Services />
+      </section>
+      <section id="clients">
+        <Clients />
+      </section>
+      <section id="testimonials">
+        <Testimonials />
+      </section>
+      <section id="case-studies">
+        <CaseStudies />
+      </section>
+      <section id="team">
+        <TeamSection />
+      </section>
+      <section id="tech-stack">
+        <TechStack />
+      </section>
+      <section id="development">
+        <Development />
+      </section>
+      <section id="development-approach">
+        <DevelopmentApproach />
+      </section>
+      <section id="resources">
+        <FeaturedResources />
+      </section>
+      <section id="hire">
+        <Hire />
+      </section>
       <Footer />
-      <CaseStudies />
-      <TechStack />
-      <Development />
     </div>
   );
 }

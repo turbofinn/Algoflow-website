@@ -45,11 +45,11 @@ export function Navbar() {
                 </div>
                 <div className="hidden md:flex items-center justify-between font-space w-[645px] h-[45px] py-[10px]">
                     <NavLink href="#" onClick={closeMenu}>About us</NavLink>
-                    <NavLink href="#about" onClick={closeMenu}>Service</NavLink>
-                    <NavLink href="#skill" onClick={closeMenu}>CaseStudies</NavLink>
+                    <NavLink href="#services" onClick={closeMenu}>Service</NavLink>
+                    <NavLink href="#case-studies" onClick={closeMenu}>CaseStudies</NavLink>
                     <NavLink href="#projects" onClick={closeMenu}>Blog</NavLink>
-                    <NavLink href="#contact" onClick={closeMenu}>How It Works</NavLink>
-                    <NavLink href="#contact" onClick={closeMenu}>Hire</NavLink>
+                    <NavLink href="#development-approach" onClick={closeMenu}>How It Works</NavLink>
+                    <NavLink href="#hire" onClick={closeMenu}>Hire</NavLink>
                 </div>
                 <div className="items-center hidden md:flex">
                     <button className="bg-gradient-to-bl flex justify-center items-center from-[#6df766] to-[#065510] text-sm text-white w-[124px] h-[42px] px-[25px] py-[14px] rounded transition-colors">Contact Us</button>

@@ -11,7 +11,11 @@ const Hire = () => {
                 </div>
 
                 <div className=' relative'>
-                    <img src="/Nav-button.png" alt="" className=' relative top-20 right-16' />
+
+                    <button className="relative top-20 right-16 z-20 w-[262px] h-[57px]  bg-gradient-to-r from-pink-500 to-orange-400 text-white font-semibold py-[14px] px-[25px] rounded-[5px]  shadow-md hover:opacity-90 transition">
+                        Hire Top Developers
+                    </button>
+
                     <img src="/Group 40.png" alt="" className=' relative -top-10' />
                 </div>
             </div>
