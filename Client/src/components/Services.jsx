@@ -1,68 +1,57 @@
 "use client";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
 const services = [
   {
-    icon: "/icons/Mobile.png",
+    image: "/images/appdev.jpg", // Full image for Mobile App Development
     title: "Mobile App Development",
     description:
-      "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
+      "We create intuitive, user-friendly mobile apps that engage your audience and drive results, leveraging the latest technologies.",
   },
   {
-    icon: "/icons/Mobile.png",
-    title: "Mobile App Development",
-    description:
-      "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
-  },
-  {
-    icon: "/icons/Tag.png",
+    image: "/images/webd.jpg", // Full image for Web Design & Development
     title: "Web Design & Development",
     description:
-      "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
+      "Your website is your number one marketing asset. We design and develop responsive websites that express your brand’s identity.",
   },
   {
-    icon: "/icons/Dashboard.png",
-    title: "Software Testing Service",
+    image: "/images/rnd.jpg", // Full image for Research & Development
+    title: "Research & Development",
     description:
-      "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
+      "We push the boundaries of innovation with cutting-edge R&D, transforming ideas into reality through strategic and technical expertise.",
   },
   {
-    icon: "/icons/Dashboard.png",
-    title: "Software Testing Service",
+    image: "/images/vlm.png", // Full image for Video Analysis with AI & Computer Vision
+    title: "Video Analysis with AI & Computer Vision",
     description:
-      "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
+      "Unlock insights from video data using AI and computer vision, enhancing decision-making, security, and customer experience.",
   },
   {
-    icon: "/icons/Tag.png",
-    title: "Web Design & Development",
+    image: "/images/wfa.webp", // Full image for Workflow Automation & AI in Industries
+    title: "Workflow Automation & AI in Industries",
     description:
-      "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
+      "Streamline business operations and increase efficiency with AI-powered automation solutions tailored for your industry.",
+  },
+  {
+    image: "/images/nlp.webp", // Full image for Natural Language Processing & LLMs
+    title: "Natural Language Processing & LLMs",
+    description:
+      "Transform how you interact with data through advanced NLP and large language models (LLMs), enabling smarter decision-making and automation.",
   },
 ];
 
 export default function Services() {
-  const [activeIndex, setActiveIndex] = useState(0);
-
   useEffect(() => {
     const style = document.createElement("style");
     style.innerHTML = `
-      .custom-pagination .swiper-pagination-bullet {
-        width: 14px;
-        height: 14px;
-        background-color: #cbd5e0; /* Gray-400 */
-        opacity: 1;
-      }
-      .custom-pagination .swiper-pagination-bullet-active {
-        background-color: #48bb78; /* Green-500 */
+      .hover-text-gradient:hover {
+        background: linear-gradient(to right, #4ed35e, #1b6f08);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
     `;
     document.head.appendChild(style);
-
     return () => {
       document.head.removeChild(style);
     };
@@ -84,50 +73,31 @@ export default function Services() {
           Services we offer
         </h2>
 
-        <Swiper
-          modules={[Pagination]}
-          spaceBetween={16}
-          slidesPerView={1.5}
-          centeredSlides={true}
-          loop={true}
-          breakpoints={{
-            640: { slidesPerView: 2.5 },
-            1024: { slidesPerView: 3.5 },
-          }}
-          pagination={{
-            clickable: true,
-            el: ".custom-pagination",
-          }}
-          className="w-full"
-          onSlideChange={({ realIndex }) => setActiveIndex(realIndex)}
-        >
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
-            <SwiperSlide key={index} className="flex justify-center h-full pb-20">
-              <div
-                className={`border-2 p-6 h-full max-w-[90%] transition-all duration-300 ease-in-out border-gray-200 shadow-lg hover:shadow-xl rounded-xl ${
-                  activeIndex === index ? "border-green-500 transform translate-y-4" : ""
-                }`}
-              >
-                <div className="w-16 h-16 rounded-full flex items-center justify-center mb-4 border-2 border-green-500">
-                  <img src={service.icon} alt={service.title} className="w-8 h-8" />
-                </div>
-                <h3
-                  className={`mb-2 text-lg font-semibold ${
-                    activeIndex === index
-                      ? "bg-gradient-to-r from-[#4ed35e] to-[#1b6f08] text-transparent bg-clip-text"
-                      : "text-gray-800"
-                  }`}
-                >
-                  {service.title}
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{service.description}</p>
+            <div
+              key={index}
+              className="border-2 p-6 h-full border-gray-200 shadow-lg hover:shadow-xl rounded-xl transition-all duration-300"
+            >
+              {/* Full Image at the top */}
+              <div className="h-48 overflow-hidden rounded-lg mb-4">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-full object-cover"
+                />
               </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
 
-        {/* Pagination Dots */}
-        <div className="custom-pagination mt-6 flex justify-center space-x-2"></div>
+              {/* Title */}
+              <h3 className="mb-2 text-lg font-semibold text-gray-800 hover-text-gradient transition-colors duration-200">
+                {service.title}
+              </h3>
+
+              {/* Description */}
+              <p className="text-gray-600 text-sm leading-relaxed">{service.description}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

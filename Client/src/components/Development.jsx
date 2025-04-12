@@ -13,16 +13,8 @@ export default function Development() {
   return (
     <section className="py-16 px-4 max-w-7xl mx-auto">
     
-      <div className="text-center mb-16">
-        <div className="flex items-center justify-center mb-4">
-          <div className="w-[69px] h-[5px] bg-gradient-to-r from-[#4ed35e] to-[#1b6f08]" />
-        </div>
-        <h2 className="text-2xl text-gray-600 mb-1">How development</h2>
-        <h3 className="text-3xl font-semibold text-gray-800">through Alcaline works</h3>
-      </div>
-
-   
-      <div className="relative mt-20">
+ 
+      <div className="relative mt-0">
         
         <div className="hidden lg:block absolute inset-x-0 top-1/2 transform -translate-y-1/2 h-0.5 bg-red-300 z-0" />
 
