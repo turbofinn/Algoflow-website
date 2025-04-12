@@ -1,9 +1,8 @@
-name: Deploy Next.js site to GitHub Pages
+name: Deploy Next.js static site to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
 
 permissions:
   contents: read
@@ -17,12 +16,9 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./Client
 
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Set up Node.js
@@ -30,14 +26,18 @@ jobs:
         with:
           node-version: 18
           cache: yarn
+          cache-dependency-path: Client/yarn.lock
 
       - name: Install dependencies
+        working-directory: ./Client
         run: yarn install
 
-      - name: Build site
+      - name: Build project
+        working-directory: ./Client
         run: yarn build
 
       - name: Export static site
+        working-directory: ./Client
         run: yarn export
 
       - name: Upload artifact
