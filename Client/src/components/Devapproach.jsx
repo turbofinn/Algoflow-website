@@ -24,10 +24,9 @@ export default function DevelopmentApproach() {
                             </svg>
                         </div>
                         <div>
-                            <h3 className="text-xl font-semibold mb-2 text-black">UX Driven Engineering</h3>
+                            <h3 className="text-xl font-semibold mb-2 text-black">Engineering-First Mindset</h3>
                             <p className="text-gray-600">
-                                Unlike other companies, we are a <span className="text-black font-medium">UX first</span> development
-                                company. Projects are driven by designers and they make sure design and experiences translate to code.
+                                We prioritize software architecture and clean code from the beginning. Our engineering-first approach ensures that performance, scalability, and maintainability are baked into every project.
                             </p>
                         </div>
                     </div>
@@ -47,10 +46,9 @@ export default function DevelopmentApproach() {
                             </svg>
                         </div>
                         <div>
-                            <h3 className="text-xl font-semibold mb-2 text-black">Developing Shared Understanding</h3>
+                            <h3 className="text-xl font-semibold mb-2 text-black">Clear Project Alignment</h3>
                             <p className="text-gray-600">
-                                Unlike other companies, we are a <span className="text-black font-medium">UX first</span> development
-                                company. Projects are driven by designers and they make sure design and experiences translate to code.
+                                We focus on building a shared understanding between product managers, developers, and stakeholders, ensuring everyone is aligned on goals, timelines, and expectations.
                             </p>
                         </div>
                     </div>
@@ -65,10 +63,9 @@ export default function DevelopmentApproach() {
                             </svg>
                         </div>
                         <div>
-                            <h3 className="text-xl font-semibold mb-2 text-black">Proven Experience and Expertise</h3>
+                            <h3 className="text-xl font-semibold mb-2 text-black">Proven Technical Expertise</h3>
                             <p className="text-gray-600">
-                                Unlike other companies, we are a <span className="text-black font-medium">UX first</span> development
-                                company. Projects are driven by designers and they make sure design and experiences translate to code.
+                                Our team brings deep knowledge of modern frameworks, cloud platforms, and DevOps practices to deliver robust and reliable software solutions.
                             </p>
                         </div>
                     </div>
@@ -88,10 +85,9 @@ export default function DevelopmentApproach() {
                             </svg>
                         </div>
                         <div>
-                            <h3 className="text-xl font-semibold mb-2 text-black">Security & Intellectual Property (IP)</h3>
+                            <h3 className="text-xl font-semibold mb-2 text-black">Security & IP Protection</h3>
                             <p className="text-gray-600">
-                                Unlike other companies, we are a <span className="text-black font-medium">UX first</span> development
-                                company. Projects are driven by designers and they make sure design and experiences translate to code.
+                                We follow industry best practices for security and ensure that intellectual property and data are always protected through strong encryption and NDA policies.
                             </p>
                         </div>
                     </div>
@@ -111,10 +107,9 @@ export default function DevelopmentApproach() {
                             </svg>
                         </div>
                         <div>
-                            <h3 className="text-xl font-semibold mb-2 text-black">Code Reviews</h3>
+                            <h3 className="text-xl font-semibold mb-2 text-black">Code Reviews & Best Practices</h3>
                             <p className="text-gray-600">
-                                Unlike other companies, we are a <span className="text-black font-medium">UX first</span> development
-                                company. Projects are driven by designers and they make sure design and experiences translate to code.
+                                All code is peer-reviewed to maintain quality, identify bugs early, and ensure adherence to industry standards and internal best practices.
                             </p>
                         </div>
                     </div>
@@ -136,8 +131,7 @@ export default function DevelopmentApproach() {
                         <div>
                             <h3 className="text-xl font-semibold mb-2 text-black ">Quality Assurance & Testing</h3>
                             <p className="text-gray-600">
-                                Unlike other companies, we are a <span className="text-black font-medium">UX first</span> development
-                                company. Projects are driven by designers and they make sure design and experiences translate to code.
+                                Rigorous QA and automated testing pipelines help us catch issues before production, ensuring stable and high-performing releases every time.
                             </p>
                         </div>
                     </div>
@@ -146,4 +140,3 @@ export default function DevelopmentApproach() {
         </div>
     )
 }
-

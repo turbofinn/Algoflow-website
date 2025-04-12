@@ -12,6 +12,8 @@ import Hire from "@/components/Hire";
 import FeaturedResources from "@/components/Resources";
 import TechStack from "@/components/TechStack";
 import Development from "@/components/Development";
+import AboutUs from "@/components/AboutUs";
+import Recognitions from "@/components/Recognitions";
 
 
 export default function Home() {
@@ -24,24 +26,35 @@ export default function Home() {
       <section id="services">
         <Services />
       </section>
-      <section id="clients">
-        <Clients />
-      </section>
-      <section id="testimonials">
-        <Testimonials />
-      </section>
-      <section id="case-studies">
-        <CaseStudies />
-      </section>
-      <section id="team">
-        <TeamSection />
-      </section>
-      <section id="tech-stack">
-        <TechStack />
+      <section id="about-us">
+        <AboutUs />
       </section>
       <section id="development">
         <Development />
       </section>
+   
+{/* 
+      <section id="case-studies">
+        <CaseStudies />
+      </section> */}
+      <section id="clients">
+        <Clients />
+      </section>
+      {/* <section id="testimonials">
+        <Testimonials />
+      </section> */}
+      {/* <section id="team">
+        <TeamSection />
+      </section>
+      <section id="tech-stack">
+        <TechStack />
+      </section> */}
+
+      <section id="recognitions">
+        <Recognitions />
+      </section>
+
+
       <section id="development-approach">
         <DevelopmentApproach />
       </section>
