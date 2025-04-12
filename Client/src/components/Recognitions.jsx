@@ -17,7 +17,7 @@ export default function Recognitions() {
           <div className="flex items-center justify-center mb-3">
             <div className="w-[69px] h-[5px] bg-gradient-to-r from-[#4ed35e] to-[#1b6f08]"></div>
           </div>
-          <h3 className="text-3xl sm:text-4xl font-bold text-gray-800">We Recognised By</h3>
+          <h3 className="text-3xl sm:text-3xl font-bold text-gray-800">We Recognised By</h3>
         </div>
 
     

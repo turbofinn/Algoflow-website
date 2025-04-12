@@ -11,20 +11,23 @@ const logos = [
 
 export default function Clients() {
   return (
-    <section className="w-full bg-white font-Inter text-black py-14 px-4">
-      <div className="max-w-4xl mx-auto text-center mb-10">
-        <div className="flex items-center justify-center mb-2">
-          <div className="w-[69px] h-[5px] bg-gradient-to-r from-[#4ed35e] to-[#1b6f08]"></div>
+    <section className="w-full bg-white font-Inter text-black py-20 px-6 md:px-10">
+      <div className="max-w-6xl mx-auto text-center mb-14">
+        <div className="flex items-center justify-center mb-4">
+          <div className="w-20 h-1.5 bg-gradient-to-r from-[#4ed35e] to-[#1b6f08] rounded-full" />
         </div>
-        <h3 className="text-2xl md:text-4xl font-bold mt-2">We Are Working With</h3>
+        <h3 className="text-3xl md:text-3xl font-extrabold tracking-tight">We Are Working With</h3>
+        <p className="text-gray-500 mt-4 max-w-xl mx-auto text-sm md:text-base">
+          Trusted by forward-thinking companies across industries.
+        </p>
       </div>
 
-      <div className="max-w-5xl mx-auto bg-[#F7F7FA] border border-[#E7DAED] rounded-2xl p-8 shadow-lg">
+      <div className="max-w-6xl mx-auto bg-[#F9FAFB] border border-[#E5E7EB] rounded-3xl p-10 shadow-xl">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {logos.map((logo) => (
             <div
               key={logo.id}
-              className="bg-white h-40 rounded-xl flex flex-col items-center justify-center shadow-md border border-gray-200 p-4"
+              className="bg-white h-44 rounded-2xl flex flex-col items-center justify-center shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow duration-300"
             >
               <div className="flex-grow flex items-center justify-center">
                 <Image
@@ -35,7 +38,7 @@ export default function Clients() {
                   className="object-contain"
                 />
               </div>
-              <p className="mt-3 text-sm font-medium text-gray-700">{logo.name}</p>
+              <p className="mt-4 text-base font-semibold text-gray-800">{logo.name}</p>
             </div>
           ))}
         </div>

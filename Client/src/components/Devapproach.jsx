@@ -2,9 +2,9 @@ export default function DevelopmentApproach() {
     return (
         <div className=" mx-auto px-4 py-16 sm:px-6 lg:px-8 bg-[#F7F7FA] flex justify-center items-center flex-col font-inter">
             <div className="text-center mb-16">
-                <h2 className="text-3xl font-bold mb-2 text-black">Our design and</h2>
+                <h2 className="text-3xl font-bold mb-2 text-black">Our software development</h2>
                 <div className="text-3xl font-bold relative text-black">
-                    development approach
+                     approach
                     <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 w-[69px] h-[5px] bg-gradient-to-r from-[#4ed35e] to-[#1b6f08]"></div>
                 </div>
             </div>
