@@ -2,7 +2,8 @@ name: Deploy Next.js static site to GitHub Pages
 
 on:
   push:
-    branches: [master]
+    branches:
+      - main
 
 permissions:
   contents: read
@@ -35,10 +36,6 @@ jobs:
       - name: Build project
         working-directory: ./Client
         run: yarn build
-
-      - name: Export static site
-        working-directory: ./Client
-        run: yarn export
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
