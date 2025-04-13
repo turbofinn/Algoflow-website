@@ -53,7 +53,7 @@ export default function Footer() {
             <p className="text-gray-600 text-sm mb-2">
             Registered office Basaratpur Adalpura chunar Mirzapur, Uttar Pradesh 231304, India.
             </p>
-            <p className="text-gray-900 font-medium mb-1">📞 +91-8960880615</p>
+            <p className="text-gray-900 font-medium mb-1">📞 +91-8960880615, +91-7452833648</p>
             <p className="text-gray-900 font-medium mb-1">
               📧 <a href="mailto:info@algoflow.ai" className="hover:underline text-green-600">info@algoflowai.com</a>
             </p>
