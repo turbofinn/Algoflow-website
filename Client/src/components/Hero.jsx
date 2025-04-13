@@ -3,9 +3,9 @@ import React, { useState, useEffect } from 'react';
 import ContactPopup from './ContactPopup';
 
 const backgroundImages = [
-  "/images/bgAI.jpg",
-  "/images/bg1.jpg",
-  "/images/bg4.jpg"
+  "/images/bgAI.webp",
+  "/images/bg1.webp",
+  "/images/bg4.webp"
 ];
 
 const Hero = () => {
