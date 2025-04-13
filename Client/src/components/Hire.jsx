@@ -12,7 +12,7 @@ const Hire = () => {
 
                 <div className="w-full lg:w-auto relative flex justify-center lg:justify-end">
                     <button className="z-20 w-full sm:w-[262px] h-[50px] sm:h-[57px] bg-gradient-to-r from-pink-500 to-orange-400 text-white font-semibold py-[12px] px-[20px] rounded-[5px] shadow-md hover:opacity-90 transition">
-                        Connect with u2 now
+                        Connect with us now
                     </button>
 
                     {/* <img 

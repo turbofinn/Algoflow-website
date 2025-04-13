@@ -22,8 +22,11 @@ export function Navbar() {
 
     const toggleMenu = () => setIsOpen(!isOpen)
     const closeMenu = () => setIsOpen(false)
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     return (
+        <>
+          {isModalOpen && <ContactPopup onClose={() => setIsModalOpen(false)} />}
         <nav className="fixed flex justify-center items-center top-0 w-full z-50 transition-all duration-300 shadow-[0_4px_40px_rgba(0,0,0,0.3)] bg-white">
             <div className="flex justify-between items-center py-[10px] px-[25px] h-[79px] w-[1440px]">
                 <div className="flex items-center w-[180px] h-[59px]">
@@ -41,7 +44,7 @@ export function Navbar() {
                     <NavLink href="#hire" onClick={closeMenu}>Hire</NavLink>
                 </div>
                 <div className="items-center hidden md:flex">
-                    <button className="bg-gradient-to-bl flex justify-center items-center from-[#6df766] to-[#065510] text-sm text-white w-[124px] h-[42px] px-[25px] py-[14px] rounded transition-colors">
+                    <button onClick={()=>setIsModalOpen(true)} className="bg-gradient-to-bl flex justify-center items-center from-[#6df766] to-[#065510] text-sm text-white w-[124px] h-[42px] px-[25px] py-[14px] rounded transition-colors">
                         Contact Us
                     </button>
                 </div>
@@ -70,6 +73,8 @@ export function Navbar() {
                 </div>
             </div>
         </nav>
+        </>
+      
     )
 }
 

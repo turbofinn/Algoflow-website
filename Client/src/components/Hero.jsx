@@ -51,7 +51,7 @@ const Hero = () => {
               className="bg-[#3D63EA] text-sm text-white w-[175px] h-[62px] px-[30px] py-[19px] rounded"
               onClick={() => setIsModalOpen(true)}
             >
-              Let's Get Started!
+              Connect now
             </button>
           </div>
 
