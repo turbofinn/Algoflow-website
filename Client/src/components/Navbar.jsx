@@ -8,6 +8,7 @@ import {
     IconBrandTwitter,
     IconBrandInstagram
 } from '@tabler/icons-react'
+import ContactPopup from './ContactPopup'
 
 export function Navbar() {
     const [isOpen, setIsOpen] = useState(false)
