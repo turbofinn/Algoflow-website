@@ -41,7 +41,7 @@ const ContactPopup = ({ onClose }) => {
     };
 
     return (
-        <div className="fixed inset-0 bg-white bg-opacity-90 flex justify-center items-center z-50 font-Inter">
+        <div className="fixed inset-0 bg-white bg-opacity-90 flex mt-8 justify-center items-center z-50 font-Inter">
             <div className="bg-white rounded-2xl shadow-2xl p-6 max-w-lg w-full text-center border border-gray-300 relative">
                 <button className="absolute top-4 right-4 text-gray-500 text-xl" onClick={onClose}>&times;</button>
                 <h2 className="text-2xl font-bold mb-3 text-black">Get In Touch</h2>
