@@ -22,44 +22,44 @@ const containerVariants = {
 };
 
 const fadeInUpVariants = {
-  hidden: { 
-    opacity: 0, 
-    y: 60 
+  hidden: {
+    opacity: 0,
+    y: 60,
   },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     y: 0,
     transition: {
       duration: 0.8,
-      ease: "easeOut"
-    }
-  }
+      ease: "easeOut",
+    },
+  },
 };
 
 const titleVariants = {
   hidden: { opacity: 0, y: 30 },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     y: 0,
     transition: {
       duration: 1,
-      ease: "easeOut"
-    }
-  }
+      ease: "easeOut",
+    },
+  },
 };
 
 const buttonVariants = {
   hidden: { opacity: 0, scale: 0.8 },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     scale: 1,
     transition: {
       duration: 0.6,
       ease: "easeOut",
       type: "spring",
-      stiffness: 100
-    }
-  }
+      stiffness: 100,
+    },
+  },
 };
 
 const trustIndicatorVariants = {
@@ -70,22 +70,22 @@ const trustIndicatorVariants = {
     transition: {
       delay: i * 0.2,
       duration: 0.6,
-      ease: "easeOut"
-    }
-  })
+      ease: "easeOut",
+    },
+  }),
 };
 
 const scrollIndicatorVariants = {
   hidden: { opacity: 0, y: 20 },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     y: 0,
     transition: {
       delay: 1.5,
       duration: 0.8,
-      ease: "easeOut"
-    }
-  }
+      ease: "easeOut",
+    },
+  },
 };
 
 // Typing animation variants
@@ -95,9 +95,9 @@ const typingContainer = {
     opacity: 1,
     transition: {
       staggerChildren: 0.08,
-      delayChildren: 0.3
-    }
-  }
+      delayChildren: 0.3,
+    },
+  },
 };
 
 const typingLetter = {
@@ -107,9 +107,9 @@ const typingLetter = {
     y: 0,
     transition: {
       duration: 0.3,
-      ease: "easeOut"
-    }
-  }
+      ease: "easeOut",
+    },
+  },
 };
 
 const Hero = () => {
@@ -144,7 +144,7 @@ const Hero = () => {
         timeout = setTimeout(() => {
           typeWriter(text, i + 1, fnCallback);
         }, 50); // Typing speed
-      } else if (typeof fnCallback === 'function') {
+      } else if (typeof fnCallback === "function") {
         timeout = setTimeout(fnCallback, 1500); // Pause before deleting
       }
     };
@@ -155,7 +155,7 @@ const Hero = () => {
         timeout = setTimeout(() => {
           deleteWriter(text, i - 1, fnCallback);
         }, 30); // Deleting speed
-      } else if (typeof fnCallback === 'function') {
+      } else if (typeof fnCallback === "function") {
         timeout = setTimeout(fnCallback, 500); // Pause before typing again
       }
     };
@@ -164,7 +164,7 @@ const Hero = () => {
       if (i < fullText.length) {
         typeWriter(fullText, 0, () => {
           deleteWriter(fullText, fullText.length, () => {
-            setLoopCount(prev => prev + 1);
+            setLoopCount((prev) => prev + 1);
             startAnimation(0);
           });
         });
@@ -184,8 +184,8 @@ const Hero = () => {
     transition: {
       duration: 4,
       repeat: Infinity,
-      ease: "easeInOut"
-    }
+      ease: "easeInOut",
+    },
   };
 
   const floatingAnimation2 = {
@@ -194,12 +194,16 @@ const Hero = () => {
     transition: {
       duration: 6,
       repeat: Infinity,
-      ease: "easeInOut"
-    }
+      ease: "easeInOut",
+    },
   };
 
   // Words that will have typing effect
-  const typingWords = ["Empowering", "Businesses", "with Custom AI and Next-Gen Software..."];
+  const typingWords = [
+    "Empowering",
+    "Businesses",
+    "with Custom AI and Next-Gen Software...",
+  ];
 
   return (
     <motion.div
@@ -214,19 +218,19 @@ const Hero = () => {
 
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <motion.div 
+        <motion.div
           className="absolute top-20 left-10 w-2 h-2 bg-[#4ed35e] rounded-full"
           animate={floatingAnimation}
         />
-        <motion.div 
+        <motion.div
           className="absolute top-40 right-20 w-1 h-1 bg-[#3D63EA] rounded-full"
           animate={floatingAnimation2}
         />
-        <motion.div 
+        <motion.div
           className="absolute bottom-32 left-1/4 w-1.5 h-1.5 bg-[#4ed35e] rounded-full"
           animate={floatingAnimation}
         />
-        <motion.div 
+        <motion.div
           className="absolute bottom-20 right-1/3 w-1 h-1 bg-white rounded-full"
           animate={floatingAnimation2}
         />
@@ -236,7 +240,7 @@ const Hero = () => {
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen p-6 2xl:p-0">
         <div className="flex flex-col items-center justify-center w-full h-full max-w-5xl mx-auto">
           {/* Centered Content Section */}
-          <motion.div 
+          <motion.div
             className="flex flex-col justify-center items-center text-center gap-12 w-full px-4 md:px-8 lg:px-12"
             variants={containerVariants}
             initial="hidden"
@@ -245,13 +249,10 @@ const Hero = () => {
             {/* Hero Content */}
             <div className="flex flex-col justify-center items-center gap-8 w-full max-w-4xl">
               {/* Main Headline */}
-              <motion.div 
-                className="space-y-6"
-                variants={titleVariants}
-              >
+              <motion.div className="space-y-6" variants={titleVariants}>
                 <h1 className="text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-normal text-white leading-snug tracking-normal">
                   {/* First line with typing effect */}
-                  <motion.div 
+                  <motion.div
                     className="inline-block"
                     variants={typingContainer}
                     initial="hidden"
@@ -263,33 +264,40 @@ const Hero = () => {
                       </motion.span>
                     ))}
                   </motion.div>
-                  
+
                   {/* Business word with special animation */}
-                  <motion.span 
+                  <motion.span
                     className="font-extrabold bg-[#22c55e] bg-clip-text text-transparent"
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: typingWords[0].length * 0.08 + 0.5, duration: 0.8, type: "spring" }}
+                    transition={{
+                      delay: typingWords[0].length * 0.08 + 0.5,
+                      duration: 0.8,
+                      type: "spring",
+                    }}
                   >
                     {" Businesses"}
                   </motion.span>
-                  
+
                   <br className="hidden sm:block" />
-                  
+
                   {/* Last line with typing effect */}
-                  <motion.div 
+                  <motion.div
                     className="inline-block font-medium text-white"
                     variants={typingContainer}
                     initial="hidden"
                     animate="visible"
                     custom={1}
-                    style={{ display: 'inline-block' }}
+                    style={{ display: "inline-block" }}
                   >
                     {typingWords[2].split("").map((char, index) => (
-                      <motion.span 
-                        key={index} 
+                      <motion.span
+                        key={index}
                         variants={typingLetter}
-                        transition={{ delay: index * 0.05 + typingWords[0].length * 0.08 + 0.5 }}
+                        transition={{
+                          delay:
+                            index * 0.05 + typingWords[0].length * 0.08 + 0.5,
+                        }}
                       >
                         {char}
                       </motion.span>
@@ -299,15 +307,13 @@ const Hero = () => {
               </motion.div>
 
               {/* Description */}
-              <motion.div 
-                className="max-w-3xl"
-                variants={fadeInUpVariants}
-              >
+              <motion.div className="max-w-3xl" variants={fadeInUpVariants}>
                 <p className="text-base md:text-base lg:text-xl font-normal text-gray-200 leading-relaxed tracking-wide">
-                  We assemble elite development teams to turn your ideas into scalable, intelligent{" "}
+                  We assemble elite development teams to turn your ideas into
+                  scalable, intelligent{" "}
                   <span className="inline-block">
                     {animatedText}
-                    <motion.span 
+                    <motion.span
                       className="inline-block w-1 h-6 bg-white align-middle ml-1"
                       animate={{ opacity: [0, 1, 0] }}
                       transition={{ duration: 0.8, repeat: Infinity }}
@@ -318,7 +324,7 @@ const Hero = () => {
             </div>
 
             {/* CTA Buttons */}
-            <motion.div 
+            <motion.div
               className="flex flex-col items-center gap-8"
               variants={fadeInUpVariants}
             >
@@ -328,21 +334,21 @@ const Hero = () => {
                   className="group relative bg-gradient-to-r from-[#22c55e] to-[#16a34a] hover:from-[#16a34a] hover:to-[#15803d] text-white font-semibold text-sm sm:text-base lg:text-lg px-6 sm:px-8 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 ease-out flex-1 sm:flex-none min-w-[140px] sm:min-w-[180px]"
                   onClick={() => setIsModalOpen(true)}
                   variants={buttonVariants}
-                  whileHover={{ 
+                  whileHover={{
                     scale: 1.05,
-                    boxShadow: "0 10px 30px rgba(34, 197, 94, 0.3)"
+                    boxShadow: "0 10px 30px rgba(34, 197, 94, 0.3)",
                   }}
                   whileTap={{ scale: 0.95 }}
                 >
                   <span className="relative z-10">Connect now</span>
                 </motion.button>
 
-                <motion.button 
+                <motion.button
                   className="group relative bg-gray-300 border border-white/30 hover:border-white/50 hover:bg-slate-200 text-black font-medium text-sm sm:text-base lg:text-lg px-6 sm:px-8 py-3 rounded-lg backdrop-blur-sm transition-all duration-200 ease-out flex-1 sm:flex-none min-w-[140px] sm:min-w-[180px]"
                   variants={buttonVariants}
-                  whileHover={{ 
+                  whileHover={{
                     scale: 1.05,
-                    backgroundColor: "rgba(226, 232, 240, 0.9)"
+                    backgroundColor: "rgba(226, 232, 240, 0.9)",
                   }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -355,26 +361,26 @@ const Hero = () => {
                 {[
                   { color: "#22c55e", text: "AI-Powered Solutions" },
                   { color: "#3D63EA", text: "Elite Development Teams" },
-                  { color: "white", text: "Scalable Software" }
+                  { color: "white", text: "Scalable Software" },
                 ].map((item, index) => (
-                  <motion.div 
+                  <motion.div
                     key={index}
                     className="flex items-center gap-2"
                     custom={index}
                     variants={trustIndicatorVariants}
                     whileHover={{ scale: 1.05 }}
                   >
-                    <motion.div 
+                    <motion.div
                       className="w-2 h-2 rounded-full"
                       style={{ backgroundColor: item.color }}
                       animate={{
                         scale: [1, 1.2, 1],
-                        opacity: [0.7, 1, 0.7]
+                        opacity: [0.7, 1, 0.7],
                       }}
                       transition={{
                         duration: 2,
                         repeat: Infinity,
-                        delay: index * 0.3
+                        delay: index * 0.3,
                       }}
                     />
                     <span>{item.text}</span>
@@ -385,29 +391,29 @@ const Hero = () => {
           </motion.div>
 
           {/* Scroll Indicator */}
-          <motion.div 
+          <motion.div
             className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
             variants={scrollIndicatorVariants}
             animate={{
-              y: [0, 10, 0]
+              y: [0, 10, 0],
             }}
             transition={{
               duration: 2,
               repeat: Infinity,
-              ease: "easeInOut"
+              ease: "easeInOut",
             }}
           >
             <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-              <motion.div 
+              <motion.div
                 className="w-1 h-3 bg-white/60 rounded-full mt-2"
                 animate={{
                   opacity: [0.6, 1, 0.6],
-                  scale: [1, 1.1, 1]
+                  scale: [1, 1.1, 1],
                 }}
                 transition={{
                   duration: 1.5,
                   repeat: Infinity,
-                  ease: "easeInOut"
+                  ease: "easeInOut",
                 }}
               />
             </div>

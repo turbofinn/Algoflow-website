@@ -1,81 +1,187 @@
-import Image from "next/image"
-import { IconArrowRight } from "@tabler/icons-react"
+"use client";
+
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { IconArrowRight } from "@tabler/icons-react";
 
 export default function FeaturedResources() {
-    const resources = [
-        {
-            id: 1,
-            title: "How to Build a Scalable Application up to 1 Million Users on AWS",
-            image: "/images/resources1.png"
-            ,
-        },
-        {
-            id: 2,
-            title: "How to Build a Scalable Application up to 1 Million Users on AWS",
-            image: "/images/resources2.png"
+  const resources = [
+    {
+      id: 1,
+      title: "AI-Powered Automation: Transforming Industries",
+      image: "/images/resources1.png",
+      excerpt:
+        "Explore how AI-driven workflow automation is revolutionizing key sectors",
+    },
+    {
+      id: 2,
+      title: "The Future of NLP & LLMs in Business",
+      image: "/images/resources2.png",
+      excerpt: "How Large Language Models are changing customer interactions",
+    },
+    {
+      id: 3,
+      title: "Secure Software Development Practices",
+      image: "/images/resources3.png",
+      excerpt:
+        "Essential security measures for protecting intellectual property",
+    },
+    {
+      id: 4,
+      title: "Cloud Architecture for Million-User Apps",
+      image: "/images/resources4.png",
+      excerpt: "Designing scalable systems on AWS for massive growth",
+    },
+    {
+      id: 5,
+      title: "Computer Vision in Retail Analytics",
+      image: "/images/resources5.png",
+      excerpt: "Transforming customer insights with AI-powered video analysis",
+    },
+  ];
 
-        },
-        {
-            id: 3,
-            title: "How to Build a Scalable Application up to 1 Million Users on AWS",
-            image: "/images/resources3.png"
+  // Animation variants
+  const container = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        when: "beforeChildren",
+      },
+    },
+  };
 
-        },
-        {
-            id: 4,
-            title: "How to Build a Scalable Application up to 1 Million Users on AWS",
-            image: "/images/resources4.png"
+  const item = {
+    hidden: { y: 30, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 10,
+      },
+    },
+  };
 
-        },
-        {
-            id: 5,
-            title: "How to Build a Scalable Application up to 1 Million Users on AWS",
-            image: "/images/resources5.png"
+  const cardHover = {
+    y: -5,
+    boxShadow: "0 15px 30px -5px rgba(0, 0, 0, 0.1)",
+    transition: { duration: 0.3 },
+  };
 
-        },
-    ]
+  const imageHover = {
+    scale: 1.03,
+    transition: { duration: 0.4 },
+  };
 
-    return (
-        <section className="container mx-auto px-4 py-12 font-Inter">
-            <div className="text-center mb-16 relative flex justify-center items-center flex-col">
-                <div className="w-[69px] h-[5px] bg-gradient-to-r from-[#4ed35e] to-[#1b6f08]"></div>
-                <div className="inline-block p-6 text-black">
+  const arrowHover = {
+    x: 5,
+    transition: { type: "spring", stiffness: 400 },
+  };
 
-                    <h2 className="text-2xl md:text-3xl font-normal mb-2">Featured
-                    </h2>
-                    <h1 className="text-3xl md:text-4xl font-bold"> Resources</h1>
-                </div>
-            </div>
+  return (
+    <motion.section
+      className="container mx-auto px-4 py-16 font-Inter"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-100px" }}
+      variants={container}
+    >
+      {/* Header */}
+      <div className="text-center mb-16">
+        <motion.div
+          className="flex justify-center mb-4"
+          initial={{ scaleX: 0 }}
+          whileInView={{ scaleX: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, type: "spring" }}
+        >
+          <div className="w-16 h-1.5 bg-gradient-to-r from-[#4ed35e] to-[#1b6f08] rounded-full" />
+        </motion.div>
 
-            <div className="relative">
-                <div className="flex overflow-x-auto gap-6 pb-6 snap-x snap-mandatory -mx-4 px-4 scrollbar-hide">
-                    {resources.map((resource) => (
-                        <div
-                            key={resource.id}
-                            className=" w-[245px] md:w-[300px] md:h-[315px] h-[345px] flex-shrink-0 snap-center bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
-                        >
-                            <div className="overflow-hidden rounded-t-lg">
-                                <div className="relative aspect-[4/3] w-full h-[175px] rounded-[20px]">
-                                    <Image
-                                        src={resource.image || "/placeholder.svg"}
-                                        alt={resource.title}
-                                        fill
-                                        className="object-cover"
-                                    />
-                                </div>
-                            </div>
-                            <div className="p-6">
-                                <h4 className="font-semibold text-lg leading-tight mb-4 text-black">{resource.title}</h4>
-                                <a href="#" className="inline-flex items-center text-green-600 hover:underline gap-2 w-full justify-end">
-                                    Read More
-                                    <IconArrowRight className="h-4 w-4" />
-                                </a>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
-        </section>
-    )
+        <motion.h2
+          className="text-2xl md:text-3xl font-medium text-gray-800 mb-2"
+          initial={{ opacity: 0, y: -10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          Featured
+        </motion.h2>
+        <motion.h1
+          className="text-3xl md:text-4xl font-bold text-gray-900"
+          initial={{ opacity: 0, y: -10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          Resources
+        </motion.h1>
+      </div>
+
+      {/* Resources carousel */}
+      <div className="relative">
+        <motion.div
+          className="flex overflow-x-auto pb-8 gap-6 snap-x snap-mandatory px-4 -mx-4 scrollbar-hide"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+          variants={container}
+        >
+          {resources.map((resource) => (
+            <motion.div
+              key={resource.id}
+              className="flex-shrink-0 w-[300px] snap-start bg-white rounded-xl shadow-sm hover:shadow-md overflow-hidden border border-gray-100 transition-all"
+              variants={item}
+              whileHover={cardHover}
+            >
+              <motion.div
+                className="relative h-48 overflow-hidden"
+                whileHover={imageHover}
+              >
+                <Image
+                  src={resource.image}
+                  alt={resource.title}
+                  fill
+                  className="object-cover"
+                  priority={resource.id <= 2} // Only prioritize first 2 images
+                />
+              </motion.div>
+
+              <div className="p-6 space-y-4">
+                <h3 className="font-semibold text-lg text-gray-900 leading-tight">
+                  {resource.title}
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {resource.excerpt}
+                </p>
+                <motion.a
+                  href="#"
+                  className="inline-flex items-center text-green-600 font-medium text-sm gap-1 group"
+                  whileHover={arrowHover}
+                >
+                  Read more
+                  <IconArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </motion.a>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+
+      {/* Floating decorative elements */}
+      <motion.div
+        className="absolute left-10 top-1/4 w-4 h-4 rounded-full bg-green-500 opacity-10"
+        animate={{
+          y: [0, -20, 0],
+          scale: [1, 1.2, 1],
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
+    </motion.section>
+  );
 }
-
