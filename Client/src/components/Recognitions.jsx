@@ -1,34 +1,37 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import Image from 'next/image';
+import { motion } from "framer-motion";
+import { useState } from "react";
+import Image from "next/image";
 
 const technologies = [
-  { 
-    name: 'MCA', 
-    image: '/images/mca.png',
-    description: 'Ministry of Corporate Affairs Registered'
+  {
+    name: "MCA",
+    image: "/images/mca.png",
+    description: "Ministry of Corporate Affairs Registered",
   },
-  { 
-    name: 'DMIIT', 
-    image: '/images/dpiit.png',
-    description: 'Department for Promotion of Industry and Internal Trade'
+  {
+    name: "DMIIT",
+    image: "/images/dpiit.png",
+    description: "Department for Promotion of Industry and Internal Trade",
   },
-  { 
-    name: 'GEM', 
-    image: '/images/gem.webp',
-    description: 'Government e-Marketplace Verified Seller'
+  {
+    name: "GEM",
+    image: "/images/gem.webp",
+    description: "Government e-Marketplace Verified Seller",
   },
-  { 
-    name: 'MSME', 
-    image: '/images/mame2.png',
-    description: 'Micro, Small & Medium Enterprises Registered'
-  }
+  {
+    name: "MSME",
+    image: "/images/mame2.png",
+    description: "Micro, Small & Medium Enterprises Registered",
+  },
 ];
 
 export default function Recognitions() {
+  const [hoveredCard, setHoveredCard] = useState(null);
+
   return (
-    <motion.section 
+    <motion.section
       className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
@@ -36,13 +39,13 @@ export default function Recognitions() {
     >
       <div className="max-w-6xl mx-auto relative">
         {/* Header */}
-        <motion.div 
+        <motion.div
           className="text-center mb-12"
           initial={{ y: -20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
         >
-          <motion.div 
+          <motion.div
             className="flex items-center justify-center mb-3"
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
@@ -50,7 +53,7 @@ export default function Recognitions() {
           >
             <div className="w-[69px] h-[5px] bg-gradient-to-r from-[#4ed35e] to-[#1b6f08]"></div>
           </motion.div>
-          <motion.h3 
+          <motion.h3
             className="text-3xl sm:text-4xl font-bold text-gray-800 mb-2"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -77,10 +80,12 @@ export default function Recognitions() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.15, duration: 0.6 }}
+              onMouseEnter={() => setHoveredCard(index)}
+              onMouseLeave={() => setHoveredCard(null)}
             >
               <motion.div
                 className="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d"
-                whileHover={{ rotateY: 180 }}
+                animate={{ rotateY: hoveredCard === index ? 180 : 0 }}
               >
                 {/* Front Side */}
                 <div className="absolute w-full h-full backface-hidden bg-white rounded-xl shadow-md flex items-center justify-center p-6">
@@ -97,7 +102,9 @@ export default function Recognitions() {
                 {/* Back Side */}
                 <div className="absolute w-full h-full backface-hidden bg-gradient-to-br from-[#4ed35e] to-[#1b6f08] rounded-xl shadow-lg rotate-y-180 flex items-center justify-center p-6 text-center">
                   <div>
-                    <h4 className="text-white font-bold text-lg mb-2">{tech.name}</h4>
+                    <h4 className="text-white font-bold text-lg mb-2">
+                      {tech.name}
+                    </h4>
                     <p className="text-white/90 text-sm">{tech.description}</p>
                   </div>
                 </div>
@@ -107,34 +114,33 @@ export default function Recognitions() {
         </div>
 
         {/* Floating elements */}
-        <motion.div 
+        <motion.div
           className="absolute top-1/4 left-1/4 w-3 h-3 bg-[#4ed35e] rounded-full opacity-70"
           animate={{
             y: [-15, 15, -15],
-            x: [-5, 5, -5]
+            x: [-5, 5, -5],
           }}
           transition={{
             duration: 6,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: "easeInOut",
           }}
         />
-        <motion.div 
+        <motion.div
           className="absolute bottom-1/4 right-1/4 w-4 h-4 bg-[#3D63EA] rounded-full opacity-70"
           animate={{
             y: [15, -15, 15],
-            x: [5, -5, 5]
+            x: [5, -5, 5],
           }}
           transition={{
             duration: 7,
             repeat: Infinity,
             ease: "easeInOut",
-            delay: 0.5
+            delay: 0.5,
           }}
         />
       </div>
 
-      {/* Add this to your global CSS */}
       <style jsx global>{`
         .perspective-1000 {
           perspective: 1000px;
