@@ -175,23 +175,8 @@ const Header = ({ y }) => (
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.4, duration: 0.6 }}
     >
-      Our software development
+      Our Software Development Approach
     </motion.h2>
-
-    <motion.div
-      className="text-2xl md:text-3xl font-bold relative text-black"
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.6, duration: 0.6 }}
-    >
-      approach
-      <motion.div
-        className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-[#4ed35e] to-[#1b6f08] rounded-full"
-        initial={{ scaleX: 0 }}
-        whileInView={{ scaleX: 1 }}
-        transition={{ delay: 0.8, duration: 0.8 }}
-      />
-    </motion.div>
   </motion.div>
 );
 

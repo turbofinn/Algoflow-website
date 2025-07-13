@@ -37,14 +37,13 @@ export default function AboutUs() {
                         whileInView={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.6, delay: 0.3 }}
                     >
-                        Why leading companies trust us <br className='hidden md:block' />
+                        Why Leading Companies Trust Us to Develop Software<br className='hidden md:block' />
                         <motion.span 
                             className="font-bold leading-8"
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
                             transition={{ delay: 0.5, duration: 0.6 }}
                         >
-                            to develop software?
                         </motion.span>
                     </motion.h2>
                     
@@ -65,7 +64,7 @@ export default function AboutUs() {
                         transition={{ delay: 0.5 }}
                         whileHover={{ x: 5 }}
                     >
-                        See more Information
+                        See More Information
                         <motion.span
                             animate={{ x: [0, 5, 0] }}
                             transition={{
@@ -88,7 +87,7 @@ export default function AboutUs() {
                     <div className="md:w-[601px] md:h-[460px] flex items-center justify-center relative">
                         <Image 
                             src="/images/Abou-us-Video.png" 
-                            alt="About Us Video" 
+                            alt="About Algoflow AI Company Video" 
                             width={601}
                             height={460}
                             className="object-cover"
@@ -123,6 +122,7 @@ export default function AboutUs() {
             </motion.section>
 
             {/* Logo Marquee Section */}
+            {/*
             <motion.div 
                 className="py-8 bg-gray-50 overflow-hidden"
                 initial={{ opacity: 0 }}
@@ -157,6 +157,7 @@ export default function AboutUs() {
                     ))}
                 </motion.div>
             </motion.div>
+            */}
         </>
     );
 }

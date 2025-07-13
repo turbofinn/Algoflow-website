@@ -77,7 +77,7 @@ export default function Services() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          Services we offer
+          Services We Offer
         </motion.h2>
 
         <motion.div 

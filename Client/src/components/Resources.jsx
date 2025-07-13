@@ -3,43 +3,10 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { IconArrowRight } from "@tabler/icons-react";
+import Link from "next/link";
+import { blogs } from "../data/blogs";
 
 export default function FeaturedResources() {
-  const resources = [
-    {
-      id: 1,
-      title: "AI-Powered Automation: Transforming Industries",
-      image: "/images/resources1.png",
-      excerpt:
-        "Explore how AI-driven workflow automation is revolutionizing key sectors",
-    },
-    {
-      id: 2,
-      title: "The Future of NLP & LLMs in Business",
-      image: "/images/resources2.png",
-      excerpt: "How Large Language Models are changing customer interactions",
-    },
-    {
-      id: 3,
-      title: "Secure Software Development Practices",
-      image: "/images/resources3.png",
-      excerpt:
-        "Essential security measures for protecting intellectual property",
-    },
-    {
-      id: 4,
-      title: "Cloud Architecture for Million-User Apps",
-      image: "/images/resources4.png",
-      excerpt: "Designing scalable systems on AWS for massive growth",
-    },
-    {
-      id: 5,
-      title: "Computer Vision in Retail Analytics",
-      image: "/images/resources5.png",
-      excerpt: "Transforming customer insights with AI-powered video analysis",
-    },
-  ];
-
   // Animation variants
   const container = {
     hidden: { opacity: 0 },
@@ -128,7 +95,7 @@ export default function FeaturedResources() {
           viewport={{ once: true, margin: "-50px" }}
           variants={container}
         >
-          {resources.map((resource) => (
+          {blogs.map((resource) => (
             <motion.div
               key={resource.id}
               className="flex-shrink-0 w-[300px] snap-start bg-white rounded-xl shadow-sm hover:shadow-md overflow-hidden border border-gray-100 transition-all"
@@ -155,14 +122,15 @@ export default function FeaturedResources() {
                 <p className="text-gray-600 text-sm leading-relaxed">
                   {resource.excerpt}
                 </p>
-                <motion.a
-                  href="#"
-                  className="inline-flex items-center text-green-600 font-medium text-sm gap-1 group"
-                  whileHover={arrowHover}
-                >
-                  Read more
-                  <IconArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </motion.a>
+                <Link href={`/blog/${resource.id}`}>
+                  <motion.div
+                    className="inline-flex items-center text-green-600 font-medium text-sm gap-1 group cursor-pointer"
+                    whileHover={arrowHover}
+                  >
+                    Read more
+                    <IconArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </motion.div>
+                </Link>
               </div>
             </motion.div>
           ))}

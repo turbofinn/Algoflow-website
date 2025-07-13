@@ -64,8 +64,8 @@ export function Navbar() {
             <NavLink href="#case-studies" onClick={closeMenu}>
               Case Studies
             </NavLink>
-            <NavLink href="#projects" onClick={closeMenu}>
-              Blog
+            <NavLink href="/blog" onClick={closeMenu}>
+              Blogs
             </NavLink>
             <NavLink href="#development-approach" onClick={closeMenu}>
               How It Works
@@ -136,7 +136,7 @@ export function Navbar() {
                 { href: "#", label: "About Us" },
                 { href: "#services", label: "Services" },
                 { href: "#case-studies", label: "CaseStudies" },
-                { href: "#projects", label: "Blog" },
+                { href: "/blog", label: "Blogs" },
                 { href: "#development-approach", label: "How It Works" },
                 { href: "#hire", label: "Hire" },
               ].map((item, index) => (
