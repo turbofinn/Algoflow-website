@@ -11,7 +11,7 @@ const technologies = [
     description: "Ministry of Corporate Affairs Registered",
   },
   {
-    name: "DMIIT",
+    name: "DPIIT",
     image: "/images/dpiit.png",
     description: "Department for Promotion of Industry and Internal Trade",
   },
@@ -59,7 +59,7 @@ export default function Recognitions() {
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.6 }}
           >
-            We're Recognized By
+            We’re Recognized By
           </motion.h3>
           <motion.p
             className="text-gray-500 max-w-2xl mx-auto"
@@ -67,7 +67,7 @@ export default function Recognitions() {
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.6 }}
           >
-            Trusted by government bodies and industry leaders
+            Trusted by Government Bodies and Industry Leaders
           </motion.p>
         </motion.div>
 
