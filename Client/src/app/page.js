@@ -4,7 +4,6 @@ import Hero from "@/components/Hero";
 import Clients from "@/components/Clients";
 import Testimonials from "@/components/Testimonials";
 import Services from "@/components/Services";
-import CaseStudies from "@/components/CaseStudies";
 import TeamSection from "@/components/Team-Section";
 import DevelopmentApproach from "@/components/Devapproach";
 import Footer from "@/components/Footer";
@@ -33,10 +32,7 @@ export default function Home() {
         <Development />
       </section>
    
-{/* 
-      <section id="case-studies">
-        <CaseStudies />
-      </section> */}
+
       <section id="clients">
         <Clients />
       </section>

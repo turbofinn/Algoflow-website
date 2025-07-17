@@ -1,13 +1,13 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import ContactPopup from "./ContactPopup"; 
+import ContactPopup from "./ContactPopup";
 
 const Hire = () => {
   const [displayText, setDisplayText] = useState("");
   const [wordIndex, setWordIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false); 
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const baseText = "Get the Best Team to Streamline Your Business ";
   const words = ["Today!", "Efficiently!", "Quickly!", "Perfectly!"];
 
@@ -43,7 +43,7 @@ const Hire = () => {
     <>
       {/* Render ContactPopup conditionally */}
       {isModalOpen && <ContactPopup onClose={() => setIsModalOpen(false)} />}
-      
+
       <section className="w-full py-16 bg-white font-Inter text-black flex justify-center items-center relative overflow-hidden">
         {/* Background blob */}
         <motion.div

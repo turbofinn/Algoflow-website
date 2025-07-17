@@ -6,7 +6,7 @@ import Image from "next/image";
 const steps = [
   {
     number: 1,
-    title: "Assemble the Right Team",
+    title: "Assemble The Right Team",
     description:
       "We handle all aspects of vetting and choosing the right team that you don't have the time, expertise, or desire to do.",
   },
@@ -50,7 +50,9 @@ export default function Development() {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Our Development Process</h2>
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
+        Our Development Process
+      </h2>
       <motion.div
         className="relative mt-0"
         initial={{ y: 20 }}

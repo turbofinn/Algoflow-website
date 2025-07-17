@@ -27,6 +27,7 @@ export default function BlogListing() {
       <div className="w-full px-4 py-8 pb-16">
         {/* Page Title */}
         <div className="text-center mb-12">
+          <div className="w-24 h-1.5 bg-gradient-to-r from-[#4ed35e] to-[#1b6f08] rounded-full mx-auto mb-4" />
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Our Blogs
           </h1>
@@ -35,7 +36,6 @@ export default function BlogListing() {
             technology trends
           </p>
         </div>
-
         {/* Featured Blog */}
         {featuredBlog && (
           <div className="max-w-6xl mx-auto mb-16">
@@ -81,7 +81,6 @@ export default function BlogListing() {
             </div>
           </div>
         )}
-
         {/* Remaining Blogs - Horizontal Scroll */}
         <div className="max-w-6xl mx-auto mb-16">
           <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">
