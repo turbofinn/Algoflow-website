@@ -54,8 +54,10 @@ export default function SharePopup({ blogId }) {
             >
               <IconX className="h-6 w-6" />
             </button>
-            
-            <p className="mb-2 font-semibold text-gray-800 pr-8">Share this link:</p>
+
+            <p className="mb-2 font-semibold text-gray-800 pr-8">
+              Share this link:
+            </p>
             <div className="mb-3">
               <input
                 type="text"
@@ -65,7 +67,7 @@ export default function SharePopup({ blogId }) {
                 onFocus={(e) => e.target.select()}
               />
             </div>
-            
+
             {/* Copy button below the input */}
             <button
               onClick={handleCopy}

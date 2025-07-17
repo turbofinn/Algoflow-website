@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, useAnimation, AnimatePresence } from "framer-motion";
 import ContactPopup from "./ContactPopup";
+import Link from "next/link";
 
 const backgroundImages = [
   "/images/bgAI.webp",
@@ -119,7 +120,23 @@ const Hero = () => {
   const [typingComplete, setTypingComplete] = useState(false);
   const [loopCount, setLoopCount] = useState(0);
   const [animatedText, setAnimatedText] = useState("");
-  const fullText = "software—powered by AlgoFlow AI...";
+  const fullText = "Software—Powered By AlgoFlow AI...";
+
+  // Function to render text with colored "Algo" and "Flow"
+  const renderColoredText = (text) => {
+    const parts = text.split("AlgoFlow");
+    if (parts.length === 2) {
+      return (
+        <>
+          {parts[0]}
+          <span className="text-[#22c55e]">Algo</span>
+          <span className="text-white">Flow</span>
+          {parts[1]}
+        </>
+      );
+    }
+    return text;
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -341,7 +358,7 @@ const Hero = () => {
                     We assemble elite development teams to turn your ideas into
                     scalable, intelligent{" "}
                     <span className="inline-block">
-                      {animatedText}
+                      {renderColoredText(animatedText)}
                       <motion.span
                         className="inline-block w-1 h-6 bg-white align-middle ml-1"
                         animate={{ opacity: [0, 1, 0] }}
@@ -372,17 +389,19 @@ const Hero = () => {
                     <span className="relative z-10">Connect Now</span>
                   </motion.button>
 
-                  <motion.button
-                    className="group relative bg-gray-300 border border-white/30 hover:border-white/50 hover:bg-slate-200 text-black font-medium text-sm sm:text-base lg:text-lg px-6 sm:px-8 py-3 rounded-lg backdrop-blur-sm transition-all duration-200 ease-out flex-1 sm:flex-none min-w-[140px] sm:min-w-[180px]"
-                    variants={buttonVariants}
-                    whileHover={{
-                      scale: 1.05,
-                      backgroundColor: "rgba(226, 232, 240, 0.9)",
-                    }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <span className="relative z-10">Learn More</span>
-                  </motion.button>
+                  <Link href="/casestudies" passHref legacyBehavior>
+                    <motion.a
+                      className="group relative bg-gray-300 border border-white/30 hover:border-white/50 hover:bg-slate-200 text-black font-medium text-sm sm:text-base lg:text-lg px-6 sm:px-8 py-3 rounded-lg backdrop-blur-sm transition-all duration-200 ease-out flex-1 sm:flex-none min-w-[140px] sm:min-w-[180px] text-center flex items-center justify-center"
+                      variants={buttonVariants}
+                      whileHover={{
+                        scale: 1.05,
+                        backgroundColor: "rgba(226, 232, 240, 0.9)",
+                      }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <span className="relative z-10">Learn More</span>
+                    </motion.a>
+                  </Link>
                 </div>
 
                 {/* Trust Indicators */}

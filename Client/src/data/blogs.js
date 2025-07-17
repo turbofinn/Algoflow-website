@@ -1,5 +1,50 @@
 export const blogs = [
   {
+    id: 7,
+    title: "United By Vision: The Journey of AlgoFlow AI",
+    image: "/images/vison.jpg",
+    excerpt:
+      "Discover how three friends turned a moment of inspiration into AlgoFlow AI, building a thriving business...",
+    content: `In the world of entrepreneurship, stories of individual brilliance often shine bright—but when college friendship becomes the foundation of business, something even more powerful emerges.
+
+AlgoFlow AI began its entrepreneurial journey in 2024, when three friends sitting in a restaurant were waiting for a long time for their bill to arrive. Nevertheless, the bill was paid but also flashed a thought of software development and thus the beginning of AlgoFlow AI.
+
+The journey was guided by four principles:
+- Discover yourself
+- Live the Work
+- Build to scale, optimize to last
+- Business proactive in the digital era
+
+Life is never a cake walk and certainly faces many rejections and holdings, but under the strong leadership and like-minded friends Divyanshi, Gaurav, and Saurabh, the company is not only breathing but living. Their consistency, determination, and execution of actions is building each challenging day into more advanced business growth. Clients are not just business but a family, employees are not a workforce but a close-knit tribe united by a shared passion for innovation here.
+
+Amidst the juggling pressure of such a fast-paced tech rise, the company is also trying to match the speed and thus has successfully put its feet in the world of AI. Specializing in building intelligent systems by leveraging cutting-edge advancements in Generative AI, Large Language Models (LLMs), Natural Language Processing (NLP), Machine Learning (ML), Deep Learning, Computer Vision, and AI-driven automation to solve real-world business challenges, it has successfully delivered various projects not only in India but overseas also.
+
+Amid the fog of sleepless nights and mounting responsibilities, the company remained steadfast. In just one year, it evolved beyond a software firm to become a full-fledged IT consultancy, driven by deepening expertise and ambition.
+
+With the constant discipline and far-sighted vision of three friends, it will always climb higher to prove “Your Dreams, Our Responsibility”.`
+  },
+  {
+    id: 6,
+    title: "Microservices vs Monolith: What’s Winning in 2025?",
+    image: "/images/microvsmono.jpeg",
+    excerpt:
+      "Explore the evolving debate between monolithic and microservices architectures in 2025...",
+    content: `Microservices vs Monolith: What’s Winning in 2025?
+
+As we progress further into the decade, the debate between monolithic and microservices architectures has not ended—it has evolved. Both approaches have matured, and the decision is increasingly about aligning technology with business context rather than choosing sides.
+
+Monoliths: Maturity and Simplicity
+Modern monolithic architectures have benefited from advancements in frameworks, observability, and cloud-native support. Today’s monoliths are leaner, easier to deploy, and simpler to debug. For many startups and fast-moving teams, the simplicity and cost-effectiveness of a well-structured monolith are hard to beat. The reduced operational overhead and straightforward deployment pipelines make monoliths an attractive choice for organizations prioritizing speed-to-market and predictability.
+
+Microservices: Scalability and Autonomy
+On the other hand, microservices have become the architecture of choice for global platforms, AI-driven workloads, and systems that demand resilience and autonomy. With the rise of service meshes, serverless patterns, and advanced orchestration tools in 2025, managing distributed systems has become more accessible. However, microservices still require a disciplined approach to avoid complexity and ensure reliability. Their strengths lie in scalability, independent module development, and fault isolation—making them ideal for organizations with large, distributed teams or rapidly evolving product requirements.
+
+The Key Insight for 2025
+The architectural choice in 2025 is less about following trends and more about understanding your business needs. If your priorities are rapid development, small team collaboration, and predictable operations, a modern monolith may be the best fit. Conversely, if your focus is on scaling, modular independence, and robust fault isolation, microservices offer significant advantages.
+
+At AlgoFlow AI, we help organizations navigate these architectural decisions by blending technology expertise, strategic insight, and a forward-looking approach. Our goal is to ensure that your systems are not only robust and scalable but also aligned with your long-term business objectives.`
+  },
+  {
     id: 1,
     title: "AI-Powered Automation: Transforming Industries",
     image: "/images/aiAutomation.png",

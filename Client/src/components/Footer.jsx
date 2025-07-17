@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="w-full bg-green-50 font-Inter">
@@ -23,18 +25,38 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold text-black mb-4">Company</h3>
             <ul className="space-y-3">
-              {["About Us", "Services", "Case Studies", "Careers"].map(
-                (link) => (
-                  <li key={link}>
-                    <a
-                      href="#"
-                      className="text-gray-600 hover:text-green-600 transition"
-                    >
-                      {link}
-                    </a>
-                  </li>
-                )
-              )}
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-600 hover:text-green-600 transition"
+                >
+                  Home
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  className="text-gray-600 hover:text-green-600 transition"
+                >
+                  Services
+                </a>
+              </li>
+              <li>
+                <Link
+                  href="/projects"
+                  className="text-gray-600 hover:text-green-600 transition"
+                >
+                  Projects
+                </Link>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-600 hover:text-green-600 transition"
+                >
+                  Careers
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -42,21 +64,38 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold text-black mb-4">Resources</h3>
             <ul className="space-y-3">
-              {[
-                "Blog",
-                "Help Center",
-                "Privacy Policy",
-                "Terms & Conditions",
-              ].map((link) => (
-                <li key={link}>
-                  <a
-                    href="#"
-                    className="text-gray-600 hover:text-green-600 transition"
-                  >
-                    {link}
-                  </a>
-                </li>
-              ))}
+              <li>
+                <Link
+                  href="/blog"
+                  className="text-gray-600 hover:text-green-600 transition"
+                >
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-600 hover:text-green-600 transition"
+                >
+                  Help Center
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-600 hover:text-green-600 transition"
+                >
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-600 hover:text-green-600 transition"
+                >
+                  Terms & Conditions
+                </a>
+              </li>
             </ul>
           </div>
 

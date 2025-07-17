@@ -56,22 +56,16 @@ export function Navbar() {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8 font-semibold">
             <NavLink href="#" onClick={closeMenu}>
-              About Us
+              Home
             </NavLink>
             <NavLink href="#services" onClick={closeMenu}>
               Services
             </NavLink>
-            <NavLink href="#case-studies" onClick={closeMenu}>
-              Case Studies
+            <NavLink href="/projects" onClick={closeMenu}>
+              Projects
             </NavLink>
             <NavLink href="/blog" onClick={closeMenu}>
               Blogs
-            </NavLink>
-            <NavLink href="#development-approach" onClick={closeMenu}>
-              How It Works
-            </NavLink>
-            <NavLink href="#hire" onClick={closeMenu}>
-              Hire
             </NavLink>
           </div>
 

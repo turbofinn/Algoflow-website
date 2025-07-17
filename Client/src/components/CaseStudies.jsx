@@ -1,7 +1,5 @@
-import Link from "next/link"
-import Image from "next/image"
-import { ArrowRight } from "lucide-react"
-
+import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 
 const caseStudies = [
   {
@@ -10,7 +8,6 @@ const caseStudies = [
     description:
       "Born out of a vision, a single-minded objective that puts service before anything else, Swift Clearance and Forwarding Corp. surging forth to deliver the best services in the shipping and logistics scenario. Its meteoric rise stems out of a solid foundation. The management boasts of over 20 years of rich and varied experience in the shipping and freight forwarding industry.",
     image: "/images/caseStudy1.jpeg",
-    backgroundColor: "bg-blue-50",
   },
   {
     id: 2,
@@ -18,7 +15,6 @@ const caseStudies = [
     description:
       "Born out of a vision, a single-minded objective that puts service before anything else, Swift Clearance and Forwarding Corp. surging forth to deliver the best services in the shipping and logistics scenario. Its meteoric rise stems out of a solid foundation. The management boasts of over 20 years of rich and varied experience in the shipping and freight forwarding industry.",
     image: "/images/caseStudy2.jpeg",
-    backgroundColor: "bg-emerald-50",
   },
   {
     id: 3,
@@ -26,110 +22,78 @@ const caseStudies = [
     description:
       "Born out of a vision, a single-minded objective that puts service before anything else, Swift Clearance and Forwarding Corp. surging forth to deliver the best services in the shipping and logistics scenario. Its meteoric rise stems out of a solid foundation. The management boasts of over 20 years of rich and varied experience in the shipping and freight forwarding industry.",
     image: "/images/caseStudy3.jpeg",
-    backgroundColor: "bg-pink-50",
   },
-]
+];
 
 export default function CaseStudies() {
-    return (
-        <section className="py-16 px-4 md:py-24 bg-gray-100">
-            <div className="max-w-6xl mx-auto">
-                <div className="text-center mb-16">
-                <div className="flex items-center justify-center mb-4">
-                    <div className="w-[69px] h-[5px] bg-gradient-to-r from-[#4ed35e] to-[#1b6f08]"></div>
-                </div>
-                <h2 className="text-center text-2xl md:text-3xl font-normal text-gray-800 md:mb-16 mb-4">
-                    Our Recent <br /> <span className="text-black font-bold">Case Studies</span>
-                </h2>
-                </div>
+  return (
+    <section className="py-20 px-4 md:py-28 bg-gradient-to-b from-gray-50 to-white">
+      <div className="max-w-6xl mx-auto">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <div className="flex items-center justify-center mb-4">
+            <div className="w-24 h-1.5 bg-gradient-to-r from-[#4ed35e] to-[#1b6f08] rounded-full" />
+          </div>
+          <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 mb-2">
+            Our Recent{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4ed35e] to-[#1b6f08]">
+              Projects
+            </span>
+          </h2>
+          <p className="text-gray-500 max-w-xl mx-auto text-base mt-2">
+            Real-world success stories powered by AlgoFlow AI.
+          </p>
+        </div>
 
-                <div className="space-y-8">
-                {caseStudies.map((study) => (
-                    <div key={study.id} className={`rounded-2xl overflow-hidden ${study.backgroundColor}`}>
-                    <div className="grid md:grid-cols-2 gap-6 p-0">
-                        <div className="flex justify-center ">
-                        <div className="relative w-full h-full shadow-lg ">
-                            <Image
-                            src={study.image || "/placeholder.svg"}
-                            alt={`${study.title} screenshot`}
-                            layout="responsive"
-                            width={600}
-                            height={400}
-                            className="object-cover w-full h-full"
-                            />
-                        </div>
-                        </div>
-                        <div className="space-y-4 pt-16 pr-10 pl-8 ">
-                        <h4
-                            style={{
-                            fontFamily: "Inter",
-                            fontWeight: 600,
-                            fontSize: "28px",
-                            lineHeight: "38.09px",
-                            letterSpacing: "0%",
-                            textAlign: "left",
-                            color: '#2D3748'
-                            }}
-                        >
-                            {study.title}
-                        </h4>
-
-                        <p
-                            style={{
-                            fontFamily: "Inter",
-                            fontWeight: 400,
-                            fontSize: "14px",
-                            lineHeight: "22.68px",
-                            letterSpacing: "0%",
-                            color: '#4A5568'
-                            }}
-                        >
-                            {study.description}
-                        </p>
-
-                        <div className="text-right pt-14">
-                            <Link
-                                href="#"
-                                className="inline-flex items-center text-primary hover:underline" 
-                                style={{
-                                    fontFamily: "Inter",
-                                    fontWeight: 600,
-                                    fontSize: "14px",
-                                    lineHeight: "14px",
-                                    letterSpacing: "0%",
-                                    color: 'green',
-                                    }}
-                            >
-                                Read more
-                                <ArrowRight className="ml-1 h-4 w-4" />
-                            </Link>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                ))}
-                </div>
-
-                <div className="text-right mt-12">
-                <Link
+        {/* Case Study Cards Grid */}
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+          {caseStudies.map((study) => (
+            <div
+              key={study.id}
+              className="flex flex-col bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 group"
+            >
+              <div className="relative w-full aspect-[16/9] overflow-hidden">
+                <Image
+                  src={study.image || "/placeholder.svg"}
+                  alt={study.title}
+                  fill
+                  className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300 rounded-t-3xl"
+                  priority={study.id === 1}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+              </div>
+              <div className="flex flex-col flex-1 p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2">
+                  {study.title}
+                </h3>
+                <p className="text-gray-600 text-sm mb-6 line-clamp-4">
+                  {study.description}
+                </p>
+                <div className="mt-auto flex justify-start">
+                  <a
                     href="#"
-                    className="inline-flex items-center text-primary hover:underline"
-                    style={{
-                    fontFamily: "Inter",
-                    fontWeight: 600,
-                    fontSize: "20px",
-                    lineHeight: "27.3px",
-                    letterSpacing: "0%",
-                    color: 'green'
-                    }}
-                >
-                    Read more case studies
-                    <ArrowRight className="ml-1 h-4 w-4" />
-                </Link>
+                    className="inline-flex items-center px-4 py-1.5 rounded-full bg-gradient-to-r from-[#4ed35e] to-[#1b6f08] text-white text-sm font-semibold shadow hover:scale-105 transition-transform"
+                  >
+                    Read more
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </a>
                 </div>
+              </div>
             </div>
-            </section>
- 
-    )
-  }
-  
+          ))}
+        </div>
+
+        {/* Read More Link */}
+        <div className="mt-14">
+          <a
+            href="#"
+            className="inline-flex items-center px-5 py-2 rounded-full border border-black bg-white text-black text-base font-medium shadow-sm hover:bg-black hover:text-white transition-colors duration-200"
+          >
+            Read more case studies
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
