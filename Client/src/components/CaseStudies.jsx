@@ -74,7 +74,7 @@ export default function CaseStudies() {
                     href="#"
                     className="inline-flex items-center px-4 py-1.5 rounded-full bg-gradient-to-r from-[#4ed35e] to-[#1b6f08] text-white text-sm font-semibold shadow hover:scale-105 transition-transform"
                   >
-                    Read more
+                    Explore More
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </a>
                 </div>

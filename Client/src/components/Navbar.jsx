@@ -9,6 +9,7 @@ import {
   IconBrandInstagram,
 } from "@tabler/icons-react";
 import ContactPopup from "./ContactPopup";
+import Link from "next/link";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -47,10 +48,10 @@ export function Navbar() {
         <div className="flex justify-between items-center py-4 px-6 lg:px-8 h-20 w-full max-w-7xl">
           {/* Logo */}
           <div className="flex items-center">
-            <span className="text-2xl font-bold text-text1 font-logo text-green-500">
+            <Link href="/" className="text-2xl font-bold text-text1 font-logo text-green-500 focus:outline-none">
               Algo
               <span className="text-black">Flow AI</span>
-            </span>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
@@ -113,9 +114,9 @@ export function Navbar() {
           <div className="flex flex-col h-full">
             {/* Mobile Menu Header */}
             <div className="flex justify-between items-center p-6 border-b border-gray-100">
-              <span className="text-xl font-bold text-green-500">
+              <Link href="/" className="text-xl font-bold text-green-500 focus:outline-none">
                 Algo<span className="text-black">Flow AI</span>
-              </span>
+              </Link>
               <button
                 onClick={closeMenu}
                 className="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-gray-700 transition-colors"
@@ -179,26 +180,26 @@ export function Navbar() {
 
 function NavLink({ href, children, onClick }) {
   return (
-    <a
+    <Link
       href={href}
       onClick={onClick}
       className="relative text-gray-700 hover:text-green-500 transition-colors duration-300 font-medium group"
     >
       {children}
       <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-green-500 transition-all duration-300 group-hover:w-full"></span>
-    </a>
+    </Link>
   );
 }
 
 function MobileNavLink({ href, onClick, children }) {
   return (
-    <a
+    <Link
       href={href}
       onClick={onClick}
       className="block text-gray-700 hover:text-green-500 transition-all duration-300 text-lg font-medium py-2 border-b border-transparent hover:border-green-200 transform hover:translate-x-2"
     >
       {children}
-    </a>
+    </Link>
   );
 }
 
