@@ -103,14 +103,12 @@ const ContactPopup = ({ onClose }) => {
           zIndex: 99999,
         }}
         toastOptions={{
-          // Define default options
           className: "",
           duration: 4000,
           style: {
             background: "#363636",
             color: "#fff",
           },
-          // Default options for specific types
           success: {
             duration: 3000,
             theme: {

@@ -37,7 +37,8 @@ export default function AboutUs() {
                         whileInView={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.6, delay: 0.3 }}
                     >
-                        Why Leading Companies Trust Us to Develop Software<br className='hidden md:block' />
+                        Why Leading Companies Trust Us to Develop Software
+                        <br className='hidden md:block' />
                         <motion.span 
                             className="font-bold leading-8"
                             initial={{ opacity: 0 }}
@@ -121,7 +122,7 @@ export default function AboutUs() {
                 </motion.div>
             </motion.section>
 
-            {/* Logo Marquee Section */}
+            {/* Logo Marquee Section — commented out in Developement branch */}
             {/*
             <motion.div 
                 className="py-8 bg-gray-50 overflow-hidden"
