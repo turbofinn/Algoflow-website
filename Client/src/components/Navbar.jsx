@@ -59,7 +59,7 @@ export function Navbar() {
             <NavLink href="#" onClick={closeMenu}>
               Home
             </NavLink>
-            <NavLink href="#services" onClick={closeMenu}>
+            <NavLink href="/#services" onClick={closeMenu}>
               Services
             </NavLink>
             <NavLink href="/projects" onClick={closeMenu}>
@@ -107,13 +107,14 @@ export function Navbar() {
 
         {/* Mobile Menu */}
         <div
-          className={`lg:hidden fixed top-0 right-0 h-full w-full bg-white shadow-2xl transform transition-transform duration-300 ease-out ${
+          className={`lg:hidden fixed top-0 left-0 h-screen w-screen bg-white z-[100] transform transition-transform duration-300 ease-out ${
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}
+          style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0 }}
         >
-          <div className="flex flex-col h-full">
+          <div className="flex flex-col h-full overflow-y-auto">
             {/* Mobile Menu Header */}
-            <div className="flex justify-between items-center p-6 border-b border-gray-100">
+            <div className="flex justify-between items-center p-6 border-b border-gray-100 bg-white sticky top-0 z-50">
               <Link href="/" className="text-xl font-bold text-green-500 focus:outline-none">
                 Algo<span className="text-black">Flow AI</span>
               </Link>
@@ -125,27 +126,12 @@ export function Navbar() {
               </button>
             </div>
 
-            {/* Mobile Navigation Links */}
-            <div className="flex-1 px-6 py-8 space-y-6">
-              {[
-                { href: "#", label: "About Us" },
-                { href: "#services", label: "Services" },
-                { href: "#case-studies", label: "CaseStudies" },
-                { href: "/blog", label: "Blogs" },
-                { href: "#development-approach", label: "How It Works" },
-                { href: "#hire", label: "Hire" },
-              ].map((item, index) => (
-                <div
-                  key={item.href}
-                  className={`transform transition-all duration-300 delay-${
-                    index * 100
-                  }`}
-                >
-                  <MobileNavLink href={item.href} onClick={closeMenu}>
-                    {item.label}
-                  </MobileNavLink>
-                </div>
-              ))}
+            {/* Navigation Links */}
+            <div className="flex flex-col px-6 py-4 space-y-4 border-b border-gray-100 bg-white">
+              <MobileNavLink href="/" onClick={closeMenu}>Home</MobileNavLink>
+              <MobileNavLink href="/#services" onClick={closeMenu}>Services</MobileNavLink>
+              <MobileNavLink href="/projects" onClick={closeMenu}>Projects</MobileNavLink>
+              <MobileNavLink href="/blog" onClick={closeMenu}>Blogs</MobileNavLink>
             </div>
 
             {/* Social Media Icons */}
@@ -192,10 +178,21 @@ function NavLink({ href, children, onClick }) {
 }
 
 function MobileNavLink({ href, onClick, children }) {
+  const handleClick = (e) => {
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    onClick?.();
+  };
+
   return (
     <Link
       href={href}
-      onClick={onClick}
+      onClick={handleClick}
       className="block text-gray-700 hover:text-green-500 transition-all duration-300 text-lg font-medium py-2 border-b border-transparent hover:border-green-200 transform hover:translate-x-2"
     >
       {children}
@@ -207,9 +204,11 @@ function SocialIcon({ icon: Icon, href }) {
   return (
     <a
       href={href}
-      className="w-10 h-10 bg-gray-100 hover:bg-green-500 rounded-full flex items-center justify-center text-gray-600 hover:text-white transition-all duration-300 transform hover:scale-110 hover:shadow-md"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-gray-500 hover:text-green-500 transition-colors duration-300"
     >
-      <Icon size={18} />
+      <Icon size={24} />
     </a>
   );
 }

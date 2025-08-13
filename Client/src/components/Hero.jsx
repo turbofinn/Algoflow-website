@@ -114,12 +114,31 @@ const typingLetter = {
 };
 
 const Hero = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [currentBg, setCurrentBg] = useState(0);
   const controls = useAnimation();
-  const [typingComplete, setTypingComplete] = useState(false);
-  const [loopCount, setLoopCount] = useState(0);
-  const [animatedText, setAnimatedText] = useState("");
+
+  const [
+    { isModalOpen, currentBg, typingComplete, loopCount, animatedText },
+    setState,
+  ] = useState({
+    isModalOpen: false,
+    currentBg: 0,
+    typingComplete: false,
+    loopCount: 0,
+    animatedText: "",
+  });
+
+  // Helper function to update state
+  const updateState = (newState) => {
+    setState((prev) => ({ ...prev, ...newState }));
+  };
+
+  // Update the state setters throughout the component
+  const setIsModalOpen = (value) => updateState({ isModalOpen: value });
+  const setCurrentBg = (value) => updateState({ currentBg: value });
+  const setTypingComplete = (value) => updateState({ typingComplete: value });
+  const setLoopCount = (value) => updateState({ loopCount: value });
+  const setAnimatedText = (value) => updateState({ animatedText: value });
+
   const fullText = "Software—Powered By AlgoFlow AI...";
 
   // Function to render text with colored "Algo" and "Flow"
@@ -139,11 +158,21 @@ const Hero = () => {
   };
 
   useEffect(() => {
+    const images = backgroundImages.map((src) => {
+      const img = new Image();
+      img.src = src;
+      return img;
+    });
+
     const interval = setInterval(() => {
-      setCurrentBg((prevIndex) => (prevIndex + 1) % backgroundImages.length);
+      setCurrentBg((prev) => (prev + 1) % backgroundImages.length);
     }, 5000);
 
-    return () => clearInterval(interval);
+    // Ensure images stay loaded
+    return () => {
+      clearInterval(interval);
+      images.forEach((img) => img.remove());
+    };
   }, []);
 
   useEffect(() => {
@@ -253,15 +282,16 @@ const Hero = () => {
       </AnimatePresence>
 
       <motion.div
-        className="relative min-h-screen bg-cover bg-center font-Inter transition-all duration-1000 ease-in-out mt-20"
-        style={{ backgroundImage: `url(${backgroundImages[currentBg]})` }}
+        className="relative min-h-screen bg-cover bg-center bg-no-repeat mt-20"
+        style={{
+          backgroundColor: '#000',
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url(${backgroundImages[0]})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1.2 }}
       >
-        {/* Enhanced Overlay with Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-black/50" />
-
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
@@ -389,7 +419,7 @@ const Hero = () => {
                     <span className="relative z-10">Connect Now</span>
                   </motion.button>
 
-                  <Link href="/casestudies" passHref legacyBehavior>
+                  <Link href="/blog" passHref legacyBehavior>
                     <motion.a
                       className="group relative bg-gray-300 border border-white/30 hover:border-white/50 hover:bg-slate-200 text-black font-medium text-sm sm:text-base lg:text-lg px-6 sm:px-8 py-3 rounded-lg backdrop-blur-sm transition-all duration-200 ease-out flex-1 sm:flex-none min-w-[140px] sm:min-w-[180px] text-center flex items-center justify-center"
                       variants={buttonVariants}
