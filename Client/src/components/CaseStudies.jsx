@@ -18,27 +18,41 @@ const caseStudies = [
   },
   {
     id: 3,
+    title: "AlgoTalks - AI IVR System",
+    description:
+      "An intelligent AI-powered IVR platform that transforms customer communication. AlgoTalks delivers dynamic, human-like conversations by self-training on any database, enabling it to adapt quickly to industry-specific needs. It offers 24/7 personalized support, automates customer interactions, and reduces dependency on manual call handling, resulting in improved efficiency and enhanced user experience.",
+    image: "/images/ivr.jpeg",
+  },
+  {
+    id: 4,
+    title: "Enream - Renewable Energy Dashboard",
+    description:
+      "A smart IoT-enabled analytics dashboard designed for solar and wind energy monitoring. Enream provides real-time insights into energy generation, efficiency metrics, and overall system health. Its intelligent algorithms optimize performance, streamline predictive maintenance, and improve decision-making. By enhancing sustainability efforts, Enream helps maximize renewable energy output effortlessly and efficiently.",
+    image: "/images/enream.jpg",
+  },
+  {
+    id: 5,
     title: "Oil India - Analytics Dashboard",
     description:
       "A comprehensive real-time analytics platform built for Oil India. The system provides advanced project tracking, inventory monitoring with smart alerts, and township maintenance oversight. This centralized data platform enables leadership to track KPIs, analyze trends, and make data-driven decisions across multiple departments and sites.",
     image: "/images/iocl.png",
   },
   {
-    id: 4,
+    id: 6,
     title: "Parkey - Smart Parking Solution",
     description:
       "Revolutionizing parking management with AI-driven automation. Our comprehensive solution features Automated Number Plate Recognition (ANPR) for seamless entry/exit, secure OTP/QR authentication, live parking availability mapping, and detailed employee monitoring. The system includes an advanced Admin Web Panel for real-time analytics, payment tracking, and user management, making parking operations efficient and user-friendly.",
     image: "/images/parkk.png",
   },
   {
-    id: 5,
+    id: 7,
     title: "NTPC - AI Safety Compliance",
     description:
       "Deployed an advanced AI surveillance system for workplace safety at NTPC. The system actively monitors PPE compliance, detects unconscious personnel, prevents unauthorized zone access, and ensures safety protocols during height work. This intelligent monitoring solution has significantly enhanced workplace safety through real-time detection and instant alerts.",
     image: "/images/ntpc.png",
   },
   {
-    id: 6,
+    id: 8,
     title: "Website Design for SCFC Canada",
     description:
       "Born out of a vision, a single-minded objective that puts service before anything else, Swift Clearance and Forwarding Corp. surging forth to deliver the best services in the shipping and logistics scenario. Its meteoric rise stems out of a solid foundation. The management boasts of over 20 years of rich and varied experience in the shipping and freight forwarding industry.",
