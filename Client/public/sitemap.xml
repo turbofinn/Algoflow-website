@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<!-- Main pages -->
+<url>
+<loc>https://algoflowai.com/</loc>
+<changefreq>weekly</changefreq>
+</url>
+<url>
+<loc>https://algoflowai.com/services</loc>
+<changefreq>monthly</changefreq>
+</url>
+<url>
+<loc>https://algoflowai.com/projects</loc>
+<changefreq>monthly</changefreq>
+</url>
+<url>
+<loc>https://algoflowai.com/blog</loc>
+<changefreq>weekly</changefreq>
+</url>
+<url>
+<loc>https://algoflowai.com/contact</loc>
+<changefreq>yearly</changefreq>
+</url>
+<!-- Blog articles -->
+<url>
+<loc>https://algoflowai.com/blog/7</loc>
+<changefreq>monthly</changefreq>
+</url>
+<url>
+<loc>https://algoflowai.com/blog/2</loc>
+<changefreq>monthly</changefreq>
+</url>
+<url>
+<loc>https://algoflowai.com/blog/6</loc>
+<changefreq>monthly</changefreq>
+</url>
+<url>
+<loc>https://algoflowai.com/blog/4</loc>
+<changefreq>monthly</changefreq>
+</url>
+<url>
+<loc>https://algoflowai.com/blog/5</loc>
+<changefreq>monthly</changefreq>
+</url>
+</urlset>
